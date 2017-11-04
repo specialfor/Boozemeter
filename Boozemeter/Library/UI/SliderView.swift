@@ -109,7 +109,6 @@ class SliderView: UIView {
         self.fontSize = fontSize
     }
     
-    
     // MARK: Setup
     private func baseSetup() {
         sliderView.isHidden = false
@@ -117,6 +116,7 @@ class SliderView: UIView {
         sliderView.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
     }
     
+    // MARK: Actions
     @objc private func valueChanged(_ slider: UISlider) {
         sliderView.value = round(slider.value)
         valueLabel.text = String(slider.value)

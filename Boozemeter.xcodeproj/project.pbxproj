@@ -17,6 +17,10 @@
 		E779D7D01FADCE7100C786EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7CF1FADCE7100C786EE /* Constants.swift */; };
 		E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FE8811FADF363006C200F /* LocalAuthService.swift */; };
 		E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FE8831FADF6CB006C200F /* AlertManager.swift */; };
+		E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECEB1FAE1B6800955DBC /* SegmentControl.swift */; };
+		E7EFECEF1FAE1CAC00955DBC /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECEE1FAE1CAC00955DBC /* ThemeManager.swift */; };
+		E7EFECF21FAE1CBC00955DBC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECF11FAE1CBC00955DBC /* Theme.swift */; };
+		E7EFECF41FAE1D0200955DBC /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECF31FAE1D0200955DBC /* MainTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		E779D7CF1FADCE7100C786EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E78FE8811FADF363006C200F /* LocalAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthService.swift; sourceTree = "<group>"; };
 		E78FE8831FADF6CB006C200F /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		E7EFECEB1FAE1B6800955DBC /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
+		E7EFECEE1FAE1CAC00955DBC /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		E7EFECF11FAE1CBC00955DBC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E7EFECF31FAE1D0200955DBC /* MainTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
 		F915EFDBAC19EDFC2E2E2CC1 /* Pods-Boozemeter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boozemeter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E72632C91FAE09D900969976 /* SliderView.swift */,
+				E7EFECEB1FAE1B6800955DBC /* SegmentControl.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -134,10 +143,21 @@
 		E78FE8801FADF345006C200F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E7EFECED1FAE1C9E00955DBC /* ThemeManager */,
 				E78FE8831FADF6CB006C200F /* AlertManager.swift */,
 				E78FE8811FADF363006C200F /* LocalAuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E7EFECED1FAE1C9E00955DBC /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				E7EFECEE1FAE1CAC00955DBC /* ThemeManager.swift */,
+				E7EFECF11FAE1CBC00955DBC /* Theme.swift */,
+				E7EFECF31FAE1D0200955DBC /* MainTheme.swift */,
+			);
+			path = ThemeManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +260,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/TTSegmentedControl/TTSegmentedControl.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -247,6 +268,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTSegmentedControl.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -279,8 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7EFECF21FAE1CBC00955DBC /* Theme.swift in Sources */,
 				E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */,
+				E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */,
 				E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */,
+				E7EFECF41FAE1D0200955DBC /* MainTheme.swift in Sources */,
+				E7EFECEF1FAE1CAC00955DBC /* ThemeManager.swift in Sources */,
 				E72632C71FAE079500969976 /* InitialViewController.swift in Sources */,
 				E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */,
 				E779D7D01FADCE7100C786EE /* Constants.swift in Sources */,
