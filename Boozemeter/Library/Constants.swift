@@ -13,4 +13,8 @@ struct Constants {
         static let consumerSecret = "yNVYZ2ANYWLEtPLJTKIaPJOn90Z2KdB8Cagjg28ag7KKD1lUoo"
     }
     
+    struct LocalAuth {
+        static let reason = "Please unblock app in order to see content"
+    }
+    
 }

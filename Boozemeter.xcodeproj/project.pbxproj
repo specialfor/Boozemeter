@@ -14,6 +14,8 @@
 		E779D7C41FADBBCA00C786EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C31FADBBCA00C786EE /* Assets.xcassets */; };
 		E779D7C71FADBBCA00C786EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C51FADBBCA00C786EE /* LaunchScreen.storyboard */; };
 		E779D7D01FADCE7100C786EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7CF1FADCE7100C786EE /* Constants.swift */; };
+		E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FE8811FADF363006C200F /* LocalAuthService.swift */; };
+		E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FE8831FADF6CB006C200F /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		E779D7C61FADBBCA00C786EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E779D7C81FADBBCA00C786EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E779D7CF1FADCE7100C786EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E78FE8811FADF363006C200F /* LocalAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthService.swift; sourceTree = "<group>"; };
+		E78FE8831FADF6CB006C200F /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		F915EFDBAC19EDFC2E2E2CC1 /* Pods-Boozemeter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boozemeter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +84,7 @@
 		E779D7BB1FADBBCA00C786EE /* Boozemeter */ = {
 			isa = PBXGroup;
 			children = (
+				E78FE8801FADF345006C200F /* Services */,
 				E779D7CE1FADCE6600C786EE /* Library */,
 				E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */,
 				E779D7BE1FADBBCA00C786EE /* ViewController.swift */,
@@ -97,6 +102,15 @@
 				E779D7CF1FADCE7100C786EE /* Constants.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		E78FE8801FADF345006C200F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E78FE8831FADF6CB006C200F /* AlertManager.swift */,
+				E78FE8811FADF363006C200F /* LocalAuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */,
 				E779D7BF1FADBBCA00C786EE /* ViewController.swift in Sources */,
+				E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */,
 				E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */,
 				E779D7D01FADCE7100C786EE /* Constants.swift in Sources */,
 			);

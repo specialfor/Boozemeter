@@ -19,16 +19,16 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        showComposer()
+        let authService = LocalAuthService()
+        if authService.canAuth(with: .touchId) {
+            authService.auth(with: .passcode, reason: Constants.LocalAuth.reason)
+        }
     }
     
     func showComposer() {
         let composer = TWTRComposer()
         
         composer.setText("just setting up my Twitter Kit")
-        //        composer.setImage(UIImage(named: "twitterkit"))
-        
-        // Called from a UIViewController
         composer.show(from: self) { (result) in
             if (result == .done) {
                 print("Successfully composed Tweet")
