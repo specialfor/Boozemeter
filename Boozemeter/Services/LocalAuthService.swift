@@ -44,8 +44,8 @@ class LocalAuthService {
     
     func auth(with type: AuthType, reason: String) {
         context.evaluatePolicy(type.policy, localizedReason: reason) { (result, error) in
-            if let laError = error as? LAError, error.code != .userFallback, error.code != .userCancel {
-                AlertManager.sharedInstance.showAlertOk(message: laError.localizedDescription)
+            if let error = error as? LAError, error.code != .userFallback, error.code != .userCancel {
+                AlertManager.sharedInstance.showAlertOk(message: error.localizedDescription)
             }
         }
     }
