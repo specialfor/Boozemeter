@@ -9,7 +9,7 @@
 import UIKit
 import TTSegmentedControl
 
-class SegmentControl: UIView {
+class SegmentControl: View {
     
     var itemTitles: [String] = [] {
         didSet {
@@ -88,19 +88,8 @@ class SegmentControl: UIView {
         return segment
     }()
     
-    // MARK: Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        baseSetup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        baseSetup()
-    }
-    
     // MARK: Setup
-    private func baseSetup() {
+    override func baseSetup() {
         segmentControl.isHidden = false
         
         segmentControl.didSelectItemWith = { [unowned self] (index, title) in

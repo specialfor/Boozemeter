@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SliderView: UIView {
+class SliderView: View {
     
     var fontSize: CGFloat = 14.0 {
         didSet {
@@ -93,15 +93,6 @@ class SliderView: UIView {
     }()
     
     // MARK: Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        baseSetup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        baseSetup()
-    }
     
     convenience init(fontSize: CGFloat) {
         self.init(frame: CGRect.zero)
@@ -110,7 +101,7 @@ class SliderView: UIView {
     }
     
     // MARK: Setup
-    private func baseSetup() {
+    override func baseSetup() {
         sliderView.isHidden = false
         
         sliderView.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
