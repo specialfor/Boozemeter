@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6C6131BE87F9DFC9903BD54 /* Pods_Boozemeter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD1C1A14A78C066157795BA /* Pods_Boozemeter.framework */; };
 		E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */; };
 		E779D7BF1FADBBCA00C786EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7BE1FADBBCA00C786EE /* ViewController.swift */; };
 		E779D7C21FADBBCA00C786EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C01FADBBCA00C786EE /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BD1C1A14A78C066157795BA /* Pods_Boozemeter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boozemeter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76EA279798E2FAA8AED2D3C7 /* Pods-Boozemeter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boozemeter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter.release.xcconfig"; sourceTree = "<group>"; };
 		E779D7B91FADBBCA00C786EE /* Boozemeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boozemeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E779D7BE1FADBBCA00C786EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		E779D7C31FADBBCA00C786EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E779D7C61FADBBCA00C786EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E779D7C81FADBBCA00C786EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F915EFDBAC19EDFC2E2E2CC1 /* Pods-Boozemeter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boozemeter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C6131BE87F9DFC9903BD54 /* Pods_Boozemeter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A7F574FA6024A398531FF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BD1C1A14A78C066157795BA /* Pods_Boozemeter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E828AB21801C27A26D049D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F915EFDBAC19EDFC2E2E2CC1 /* Pods-Boozemeter.debug.xcconfig */,
+				76EA279798E2FAA8AED2D3C7 /* Pods-Boozemeter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E779D7B01FADBBCA00C786EE = {
 			isa = PBXGroup;
 			children = (
 				E779D7BB1FADBBCA00C786EE /* Boozemeter */,
 				E779D7BA1FADBBCA00C786EE /* Products */,
+				0E828AB21801C27A26D049D6 /* Pods */,
+				04A7F574FA6024A398531FF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E779D7CB1FADBBCA00C786EE /* Build configuration list for PBXNativeTarget "Boozemeter" */;
 			buildPhases = (
+				00933D76D6DE9C89E91B84ED /* [CP] Check Pods Manifest.lock */,
 				E779D7B51FADBBCA00C786EE /* Sources */,
 				E779D7B61FADBBCA00C786EE /* Frameworks */,
 				E779D7B71FADBBCA00C786EE /* Resources */,
+				376E2DF01046666B2AA0E177 /* [CP] Embed Pods Frameworks */,
+				6FF9214A446FEC91A57EBEAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00933D76D6DE9C89E91B84ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Boozemeter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		376E2DF01046666B2AA0E177 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FF9214A446FEC91A57EBEAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E779D7B51FADBBCA00C786EE /* Sources */ = {
@@ -272,29 +357,33 @@
 		};
 		E779D7CC1FADBBCA00C786EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F915EFDBAC19EDFC2E2E2CC1 /* Pods-Boozemeter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Boozemeter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.noblesteam.Boozemeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E779D7CD1FADBBCA00C786EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76EA279798E2FAA8AED2D3C7 /* Pods-Boozemeter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Boozemeter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.noblesteam.Boozemeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
