@@ -9,4 +9,5 @@ target 'Boozemeter' do
   pod 'FBSDKCoreKit', '~> 4.27'
   pod 'FBSDKShareKit', '~> 4.27'
   pod 'TwitterKit', '~> 3.2'
+  pod 'SnapKit', '~> 4.0.0' 
 end

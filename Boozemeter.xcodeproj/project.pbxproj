@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E6C6131BE87F9DFC9903BD54 /* Pods_Boozemeter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD1C1A14A78C066157795BA /* Pods_Boozemeter.framework */; };
+		E72632C71FAE079500969976 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72632C61FAE079500969976 /* InitialViewController.swift */; };
+		E72632CA1FAE09D900969976 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72632C91FAE09D900969976 /* SliderView.swift */; };
 		E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */; };
-		E779D7BF1FADBBCA00C786EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7BE1FADBBCA00C786EE /* ViewController.swift */; };
 		E779D7C21FADBBCA00C786EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C01FADBBCA00C786EE /* Main.storyboard */; };
 		E779D7C41FADBBCA00C786EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C31FADBBCA00C786EE /* Assets.xcassets */; };
 		E779D7C71FADBBCA00C786EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C51FADBBCA00C786EE /* LaunchScreen.storyboard */; };
@@ -21,9 +22,10 @@
 /* Begin PBXFileReference section */
 		3BD1C1A14A78C066157795BA /* Pods_Boozemeter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boozemeter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EA279798E2FAA8AED2D3C7 /* Pods-Boozemeter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boozemeter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter.release.xcconfig"; sourceTree = "<group>"; };
+		E72632C61FAE079500969976 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		E72632C91FAE09D900969976 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		E779D7B91FADBBCA00C786EE /* Boozemeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boozemeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E779D7BE1FADBBCA00C786EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E779D7C11FADBBCA00C786EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E779D7C31FADBBCA00C786EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E779D7C61FADBBCA00C786EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E72632C41FAE02F300969976 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E72632C51FAE077900969976 /* Initial */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E72632C51FAE077900969976 /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				E72632C61FAE079500969976 /* InitialViewController.swift */,
+			);
+			path = Initial;
+			sourceTree = "<group>";
+		};
+		E72632C81FAE09CD00969976 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E72632C91FAE09D900969976 /* SliderView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		E779D7B01FADBBCA00C786EE = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +110,10 @@
 		E779D7BB1FADBBCA00C786EE /* Boozemeter */ = {
 			isa = PBXGroup;
 			children = (
+				E72632C41FAE02F300969976 /* Modules */,
 				E78FE8801FADF345006C200F /* Services */,
 				E779D7CE1FADCE6600C786EE /* Library */,
 				E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */,
-				E779D7BE1FADBBCA00C786EE /* ViewController.swift */,
 				E779D7C01FADBBCA00C786EE /* Main.storyboard */,
 				E779D7C31FADBBCA00C786EE /* Assets.xcassets */,
 				E779D7C51FADBBCA00C786EE /* LaunchScreen.storyboard */,
@@ -99,6 +125,7 @@
 		E779D7CE1FADCE6600C786EE /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				E72632C81FAE09CD00969976 /* UI */,
 				E779D7CF1FADCE7100C786EE /* Constants.swift */,
 			);
 			path = Library;
@@ -212,12 +239,14 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -251,10 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */,
-				E779D7BF1FADBBCA00C786EE /* ViewController.swift in Sources */,
 				E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */,
+				E72632C71FAE079500969976 /* InitialViewController.swift in Sources */,
 				E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */,
 				E779D7D01FADCE7100C786EE /* Constants.swift in Sources */,
+				E72632CA1FAE09D900969976 /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
