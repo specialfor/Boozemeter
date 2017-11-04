@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class InitialViewController: UIViewController {
+class InitialViewController: ViewController {
     
     // MARK: Views
     lazy var titleLabel: UILabel = {
@@ -74,7 +74,7 @@ class InitialViewController: UIViewController {
         button.backgroundColor = ThemeManager.shared.theme.mainColor
         
         button.layer.cornerRadius = 6.0
-        button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        button.addShadow()
         
         let inset = 16.0
         let height = 44.0
@@ -115,7 +115,7 @@ class InitialViewController: UIViewController {
         person.sex = Sex(rawValue: sexSegment.currentIndex) ?? .male
         
         StorageService.default.person = person
-        SplashRouter.shared.showMain()
+        SplashRouter.shared.showDashboard()
     }
     
     // MARK: Private methods

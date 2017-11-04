@@ -18,13 +18,12 @@ class SplashRouter {
     }()
     
     var rootViewController: UIViewController {
-        var viewController: UIViewController = InitialViewController()
-        
         if let _ = StorageService.default.person {
-            viewController = UIViewController()
+            showDashboard()
+        } else {
+            showInitial()
         }
         
-        navigationController.viewControllers = [viewController]
         return navigationController
     }
     
@@ -34,8 +33,16 @@ class SplashRouter {
     private init() {}
     
     // MARK: Routes
-    func showMain() {
-        let viewController = UIViewController()
-        navigationController.viewControllers = [viewController]
+    func showInitial() {
+        showModule(InitialViewController())
+    }
+    
+    func showDashboard() {
+        showModule(DashboardViewController())
+    }
+    
+    private func showModule(_ viewController: UIViewController) {
+        navigationController.pushViewController(viewController, animated: true)
+        navigationController.viewControllers = [navigationController.viewControllers.last!]
     }
 }

@@ -18,4 +18,14 @@ protocol Theme {
     var textColor: UIColor { get }
     var selectedTextColor: UIColor { get }
     
+    var darkGreyTextColor: UIColor { get }
+    
+}
+
+extension Theme {
+    
+    var darkGreyTextColor: UIColor {
+        return UIColor.darkGray
+    }
+    
 }
