@@ -13,6 +13,7 @@
 		E779D7C21FADBBCA00C786EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C01FADBBCA00C786EE /* Main.storyboard */; };
 		E779D7C41FADBBCA00C786EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C31FADBBCA00C786EE /* Assets.xcassets */; };
 		E779D7C71FADBBCA00C786EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C51FADBBCA00C786EE /* LaunchScreen.storyboard */; };
+		E779D7D01FADCE7100C786EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7CF1FADCE7100C786EE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E779D7C31FADBBCA00C786EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E779D7C61FADBBCA00C786EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E779D7C81FADBBCA00C786EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E779D7CF1FADCE7100C786EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F915EFDBAC19EDFC2E2E2CC1 /* Pods-Boozemeter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boozemeter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		E779D7BB1FADBBCA00C786EE /* Boozemeter */ = {
 			isa = PBXGroup;
 			children = (
+				E779D7CE1FADCE6600C786EE /* Library */,
 				E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */,
 				E779D7BE1FADBBCA00C786EE /* ViewController.swift */,
 				E779D7C01FADBBCA00C786EE /* Main.storyboard */,
@@ -86,6 +89,14 @@
 				E779D7C81FADBBCA00C786EE /* Info.plist */,
 			);
 			path = Boozemeter;
+			sourceTree = "<group>";
+		};
+		E779D7CE1FADCE6600C786EE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E779D7CF1FADCE7100C786EE /* Constants.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +216,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Boozemeter/Pods-Boozemeter-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -223,6 +238,7 @@
 			files = (
 				E779D7BF1FADBBCA00C786EE /* ViewController.swift in Sources */,
 				E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */,
+				E779D7D01FADCE7100C786EE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,12 +376,15 @@
 			baseConfigurationReference = F915EFDBAC19EDFC2E2E2CC1 /* Pods-Boozemeter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = URNH28Q66F;
 				INFOPLIST_FILE = Boozemeter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.noblesteam.Boozemeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -376,12 +395,15 @@
 			baseConfigurationReference = 76EA279798E2FAA8AED2D3C7 /* Pods-Boozemeter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = URNH28Q66F;
 				INFOPLIST_FILE = Boozemeter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.noblesteam.Boozemeter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -8,5 +8,5 @@ target 'Boozemeter' do
   # Pods for Boozemeter
   pod 'FBSDKCoreKit', '~> 4.27'
   pod 'FBSDKShareKit', '~> 4.27'
-
+  pod 'TwitterKit', '~> 3.2'
 end
