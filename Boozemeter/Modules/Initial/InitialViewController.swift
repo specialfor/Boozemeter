@@ -101,21 +101,21 @@ class InitialViewController: UIViewController {
         titleLabel.text = "Введите персональные данные"
         
         sexSegment.titleLabel.text = "Пол:"
-        sexSegment.itemTitles = ["Муж.", "Жен."]
-        sexSegment.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
+        sexSegment.itemTitles = [Sex.male.title, Sex.female.title]
         
         nextButton.setTitle("Вперед", for: .normal)
         nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .touchUpInside)
     }
     
     // MARK: Actions
-    @objc private func valueChanged(_ segment: SegmentControl) {
-        print("Current selected index: \(segment.currentIndex)")
-    }
-    
     @objc private func nextTapped(_ button: UIButton) {
-        // TODO: Open Main Screen
-        print("next tapped")
+        var person = Person()
+        person.height = Double(heightSlider.currentValue)
+        person.weight = Double(weightSlider.currentValue)
+        person.sex = Sex(rawValue: sexSegment.currentIndex) ?? .male
+        
+        StorageService.default.person = person
+        SplashRouter.shared.showMain()
     }
     
     // MARK: Private methods

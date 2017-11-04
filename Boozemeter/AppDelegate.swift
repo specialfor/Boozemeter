@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // Configure window
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = InitialViewController()
+        window?.rootViewController = SplashRouter.shared.rootViewController
         window?.makeKeyAndVisible()
         
         // Facebook SDK
@@ -43,5 +44,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return handled
     }
 
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        StorageService.default.save()
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        StorageService.default.save()
+    }
+    
 }
 

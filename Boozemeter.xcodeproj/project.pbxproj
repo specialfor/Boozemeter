@@ -17,6 +17,10 @@
 		E779D7D01FADCE7100C786EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7CF1FADCE7100C786EE /* Constants.swift */; };
 		E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FE8811FADF363006C200F /* LocalAuthService.swift */; };
 		E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FE8831FADF6CB006C200F /* AlertManager.swift */; };
+		E7A539F51FAE3501005BB952 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A539F41FAE3501005BB952 /* Person.swift */; };
+		E7A539F71FAE36F3005BB952 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A539F61FAE36F3005BB952 /* StorageService.swift */; };
+		E7A539F91FAE4D6E005BB952 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A539F81FAE4D6E005BB952 /* Settings.swift */; };
+		E7A539FC1FAE4E69005BB952 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A539FB1FAE4E69005BB952 /* SplashRouter.swift */; };
 		E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECEB1FAE1B6800955DBC /* SegmentControl.swift */; };
 		E7EFECEF1FAE1CAC00955DBC /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECEE1FAE1CAC00955DBC /* ThemeManager.swift */; };
 		E7EFECF21FAE1CBC00955DBC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECF11FAE1CBC00955DBC /* Theme.swift */; };
@@ -37,6 +41,10 @@
 		E779D7CF1FADCE7100C786EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E78FE8811FADF363006C200F /* LocalAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthService.swift; sourceTree = "<group>"; };
 		E78FE8831FADF6CB006C200F /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		E7A539F41FAE3501005BB952 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E7A539F61FAE36F3005BB952 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		E7A539F81FAE4D6E005BB952 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E7A539FB1FAE4E69005BB952 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		E7EFECEB1FAE1B6800955DBC /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		E7EFECEE1FAE1CAC00955DBC /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		E7EFECF11FAE1CBC00955DBC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -76,6 +84,7 @@
 		E72632C41FAE02F300969976 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E7A539FA1FAE4E4A005BB952 /* Splash */,
 				E72632C51FAE077900969976 /* Initial */,
 			);
 			path = Modules;
@@ -134,6 +143,7 @@
 		E779D7CE1FADCE6600C786EE /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				E7A539F31FAE34F4005BB952 /* Models */,
 				E72632C81FAE09CD00969976 /* UI */,
 				E779D7CF1FADCE7100C786EE /* Constants.swift */,
 			);
@@ -146,8 +156,26 @@
 				E7EFECED1FAE1C9E00955DBC /* ThemeManager */,
 				E78FE8831FADF6CB006C200F /* AlertManager.swift */,
 				E78FE8811FADF363006C200F /* LocalAuthService.swift */,
+				E7A539F61FAE36F3005BB952 /* StorageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E7A539F31FAE34F4005BB952 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7A539F41FAE3501005BB952 /* Person.swift */,
+				E7A539F81FAE4D6E005BB952 /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E7A539FA1FAE4E4A005BB952 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				E7A539FB1FAE4E69005BB952 /* SplashRouter.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		E7EFECED1FAE1C9E00955DBC /* ThemeManager */ = {
@@ -302,9 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7EFECF21FAE1CBC00955DBC /* Theme.swift in Sources */,
+				E7A539FC1FAE4E69005BB952 /* SplashRouter.swift in Sources */,
+				E7A539F71FAE36F3005BB952 /* StorageService.swift in Sources */,
+				E7A539F91FAE4D6E005BB952 /* Settings.swift in Sources */,
 				E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */,
 				E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */,
 				E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */,
+				E7A539F51FAE3501005BB952 /* Person.swift in Sources */,
 				E7EFECF41FAE1D0200955DBC /* MainTheme.swift in Sources */,
 				E7EFECEF1FAE1CAC00955DBC /* ThemeManager.swift in Sources */,
 				E72632C71FAE079500969976 /* InitialViewController.swift in Sources */,
