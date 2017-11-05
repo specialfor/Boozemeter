@@ -6,6 +6,8 @@
 //  Copyright © 2017 NoblesTeam. All rights reserved.
 //
 
+import UIKit
+
 enum AlcoholLevel: Int {
     case weak
     case norm
@@ -32,10 +34,21 @@ enum AlcoholLevel: Int {
         return AlcoholLevel.images[self.rawValue]
     }
     
+    var color: UIColor {
+        return AlcoholLevel.colors[self.rawValue]
+    }
+    
     private static let images: [String] = [
         "weak",
         "norm",
         "strong",
         "death"
+    ]
+    
+    private static let colors: [UIColor] = [
+        .green,
+        .orange,
+        .brown,
+        .red
     ]
 }

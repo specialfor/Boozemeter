@@ -13,7 +13,7 @@ class DashboardViewController: ViewController {
     var alcoholService: AlcoholStateService!
     var alcoholLevel: AlcoholLevel? {
         didSet {
-            setShareButton()
+            setupLevel()
         }
     }
     
@@ -159,8 +159,9 @@ class DashboardViewController: ViewController {
         }
     }
     
-    private func setShareButton() {
+    private func setupLevel() {
         navigationItem.rightBarButtonItem?.isEnabled = alcoholLevel != nil
+        headerView.stateView.backgroundColor = alcoholLevel?.color ?? .clear
     }
 }
 

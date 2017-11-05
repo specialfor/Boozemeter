@@ -68,7 +68,7 @@ class DashboardHeaderView: View {
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
         
-        stateView.backgroundColor = .green
+        stateView.backgroundColor = .clear
     }
     
 }
