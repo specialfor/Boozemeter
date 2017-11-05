@@ -100,6 +100,7 @@
 		E72632C41FAE02F300969976 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E7A8F7711FAE793D005ACDE9 /* Drinks */,
 				E7A8F75B1FAE6317005ACDE9 /* Dashboard */,
 				E7A539FA1FAE4E4A005BB952 /* Splash */,
 				E72632C51FAE077900969976 /* Initial */,
@@ -216,6 +217,13 @@
 				E7A8F76D1FAE7387005ACDE9 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E7A8F7711FAE793D005ACDE9 /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Drinks;
 			sourceTree = "<group>";
 		};
 		E7EFECED1FAE1C9E00955DBC /* ThemeManager */ = {

@@ -11,52 +11,24 @@ import UIKit
 class DashboardHeaderView: View {
     
     // MARK: Views
-    lazy var titleLabel: UILabel = {
-        let label = UILabel(textColor: theme.selectedTextColor, fontSize: 16.0)
-        
-        label.textAlignment = .center
-        
-        label.text = "Boozemeter"
-        
-        self.addSubview(label)
-        label.snp.makeConstraints({ (make) in
-            make.top.equalTo(32)
-            make.centerX.equalToSuperview()
-        })
-        
-        return label
-    }()
-    
-    lazy var settingsButton: UIButton = {
-        let button = UIButton()
-        
-        button.setTitleColor(theme.selectedTextColor, for: .normal)
-        
-        self.addSubview(button)
-        button.snp.makeConstraints({ (make) in
-            make.right.equalTo(-16)
-            make.centerY.equalTo(titleLabel)
-        })
-        
-        return button
-    }()
-    
     lazy var concTitleLabel: UILabel = {
-        let label = UILabel(textColor: theme.selectedTextColor, fontSize: 14.0, weight: .light)
+        let label = UILabel(textColor: theme.selectedTextColor, fontSize: 18.0, weight: .light)
         
         label.text = "Концентрация:"
         
+        let inset = 16.0
+        
         self.addSubview(label)
         label.snp.makeConstraints({ (make) in
-            make.left.equalTo(16.0)
-            make.top.equalTo(titleLabel.snp.bottom).offset(32.0)
+            make.left.equalTo(inset)
+            make.top.equalTo(inset)
         })
         
         return label
     }()
     
     lazy var concValueLabel: UILabel = {
-        let label = UILabel(textColor: theme.selectedTextColor, fontSize: 32.0)
+        let label = UILabel(textColor: theme.selectedTextColor, fontSize: 52.0)
         
         self.addSubview(label)
         label.snp.makeConstraints({ (make) in
@@ -84,9 +56,8 @@ class DashboardHeaderView: View {
     // MARK: Setup
     override func baseSetup() {
         concValueLabel.text = "0.00‰"
-        settingsButton.setTitle("Настройки", for: .normal)
         
-        stateView.backgroundColor = .clear
+        stateView.backgroundColor = .green
     }
     
 }

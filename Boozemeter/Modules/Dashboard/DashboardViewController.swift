@@ -82,12 +82,22 @@ class DashboardViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIApplication.shared.statusBarStyle = .lightContent
-        
+        configureNavBar()
+
         resorptionTimeView.titleLabel.text = "Время вывода алкоголя:"
         resorptionDateView.titleLabel.text = "Дата отрезвления:"
         
         addButton.setTitle("A", for: .normal)
     }
     
+    // MARK: Configuration
+    private func configureNavBar() {
+        navigationItem.title = "Состояние"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(settingsTapped(_:)))
+    }
+    
+    // MARK: Actions
+    @objc private func settingsTapped(_ button: UIBarButtonItem) {
+        
+    }
 }

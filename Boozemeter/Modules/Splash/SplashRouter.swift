@@ -19,6 +19,7 @@ class SplashRouter {
     
     var rootViewController: UIViewController {
         if let _ = StorageService.default.person {
+            configureNavBar()
             showDashboard()
         } else {
             showInitial()
@@ -44,5 +45,23 @@ class SplashRouter {
     private func showModule(_ viewController: UIViewController) {
         navigationController.pushViewController(viewController, animated: true)
         navigationController.viewControllers = [navigationController.viewControllers.last!]
+    }
+    
+    private func configureNavBar() {
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        let navigationBar = navigationController.navigationBar
+        
+        let theme = ThemeManager.shared.theme
+        
+        navigationBar.barTintColor = theme.mainColor
+        navigationBar.isTranslucent = false
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+        
+        navigationBar.tintColor = theme.selectedTextColor
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: theme.selectedTextColor]
+        
+        navigationController.isNavigationBarHidden = false
     }
 }
