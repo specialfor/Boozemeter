@@ -22,7 +22,7 @@ enum AlcoholLevel: Int {
             self.init(rawValue: 2)
         case let x where x >= 0.6:
             self.init(rawValue: 1)
-        case let x where x > 0:
+        case let x where x >= 0.3:
             self.init(rawValue: 0)
         default:
             return nil
@@ -50,9 +50,9 @@ enum AlcoholLevel: Int {
     ]
     
     private static let colors: [UIColor] = [
-        .green,
-        .orange,
-        .brown,
+        UIColor(red: 255/255, green: 192/255, blue: 0, alpha: 1),
+        UIColor(red: 255/255, green: 144/255, blue: 0, alpha: 1),
+        UIColor(red: 255/255, green: 78/255, blue: 0, alpha: 1),
         .red
     ]
     
