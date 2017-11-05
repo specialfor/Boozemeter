@@ -42,6 +42,12 @@ class SplashRouter {
         showModule(DashboardViewController())
     }
     
+    func showDashboard(with selectedDrink: SelectedDrink) {
+        let viewController = navigationController.viewControllers.first as? DashboardViewController
+        viewController?.selectedDrink = selectedDrink
+        navigationController.popToRootViewController(animated: true)
+    }
+    
     func showDrinks() {
         showModule(DrinksViewController(), popPrev: false)
     }

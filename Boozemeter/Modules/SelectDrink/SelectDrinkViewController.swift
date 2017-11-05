@@ -127,6 +127,18 @@ class SelectDrinkViewController: ViewController {
         timeSlider.isHidden = false
         
         calculateButton.setTitle("Посчитать", for: .normal)
+        calculateButton.addTarget(self, action: #selector(calculateTapped), for: .touchUpInside)
+    }
+    
+    // MARK: Actions
+    @objc private func calculateTapped() {
+        var drink = SelectedDrink()
+        drink.turnover = Double(turnoverSlider.currentValue / 100.0)
+        drink.size = Int(sizeSlider.currentValue)
+        drink.satiety = Double(satietySlider.currentValue / 100.0)
+        drink.time = Int(timeSlider.currentValue)
+        
+        SplashRouter.shared.showDashboard(with: drink)
     }
     
 }

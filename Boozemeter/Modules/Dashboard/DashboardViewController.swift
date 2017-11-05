@@ -10,6 +10,18 @@ import UIKit
 
 class DashboardViewController: ViewController {
     
+    var selectedDrink: SelectedDrink? {
+        didSet {
+            if let drink = selectedDrink {
+                let concentration = AlcoholCalculator().calculateConcentration(for: StorageService.default.person!, withDrink: drink)
+                
+                headerView.concValueLabel.text = "\(concentration) ‰"
+            } else {
+                headerView.concValueLabel.text = "0.00 ‰"
+            }   
+        }
+    }
+    
     // MARK: Views
     lazy var headerView: DashboardHeaderView = {
         let view = DashboardHeaderView()

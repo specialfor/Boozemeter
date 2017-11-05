@@ -17,6 +17,8 @@
 		E72F8FD21FAF134100D90E90 /* SelectDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD11FAF134100D90E90 /* SelectDrinkViewController.swift */; };
 		E72F8FD41FAF13DF00D90E90 /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD31FAF13DF00D90E90 /* DrinkView.swift */; };
 		E72F8FD61FAF24FA00D90E90 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD51FAF24FA00D90E90 /* Button.swift */; };
+		E72F8FD81FAF2F3100D90E90 /* AlcoholCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD71FAF2F3100D90E90 /* AlcoholCalculator.swift */; };
+		E72F8FDA1FAF30E900D90E90 /* SelectedDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD91FAF30E900D90E90 /* SelectedDrink.swift */; };
 		E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */; };
 		E779D7C41FADBBCA00C786EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C31FADBBCA00C786EE /* Assets.xcassets */; };
 		E779D7C71FADBBCA00C786EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C51FADBBCA00C786EE /* LaunchScreen.storyboard */; };
@@ -54,6 +56,9 @@
 		E72F8FD11FAF134100D90E90 /* SelectDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDrinkViewController.swift; sourceTree = "<group>"; };
 		E72F8FD31FAF13DF00D90E90 /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
 		E72F8FD51FAF24FA00D90E90 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		E72F8FD71FAF2F3100D90E90 /* AlcoholCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholCalculator.swift; sourceTree = "<group>"; };
+		E72F8FD91FAF30E900D90E90 /* SelectedDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDrink.swift; sourceTree = "<group>"; };
+		E72F8FDE1FAF3DEC00D90E90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E779D7B91FADBBCA00C786EE /* Boozemeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boozemeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E779D7C31FADBBCA00C786EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +207,7 @@
 				E78FE8831FADF6CB006C200F /* AlertManager.swift */,
 				E78FE8811FADF363006C200F /* LocalAuthService.swift */,
 				E7A539F61FAE36F3005BB952 /* StorageService.swift */,
+				E72F8FD71FAF2F3100D90E90 /* AlcoholCalculator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 				E7A539F81FAE4D6E005BB952 /* Settings.swift */,
 				E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */,
 				E72F8FCC1FAF01F700D90E90 /* Drink.swift */,
+				E72F8FD91FAF30E900D90E90 /* SelectedDrink.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,8 +316,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = E779D7B01FADBBCA00C786EE;
 			productRefGroup = E779D7BA1FADBBCA00C786EE /* Products */;
@@ -414,11 +421,13 @@
 				E7A8F76C1FAE7363005ACDE9 /* UIViewControllerExtension.swift in Sources */,
 				E7A539F91FAE4D6E005BB952 /* Settings.swift in Sources */,
 				E7A8F7681FAE6FC8005ACDE9 /* View.swift in Sources */,
+				E72F8FD81FAF2F3100D90E90 /* AlcoholCalculator.swift in Sources */,
 				E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */,
 				E72F8FCB1FAEFE3500D90E90 /* DrinksCollectionViewLayout.swift in Sources */,
 				E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */,
 				E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */,
 				E72F8FD21FAF134100D90E90 /* SelectDrinkViewController.swift in Sources */,
+				E72F8FDA1FAF30E900D90E90 /* SelectedDrink.swift in Sources */,
 				E7A8F76A1FAE7337005ACDE9 /* ViewController.swift in Sources */,
 				E72F8FCF1FAF04AA00D90E90 /* DrinkCell.swift in Sources */,
 				E7A8F75D1FAE6332005ACDE9 /* DashboardViewController.swift in Sources */,
@@ -445,6 +454,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E779D7C61FADBBCA00C786EE /* Base */,
+				E72F8FDE1FAF3DEC00D90E90 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -456,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -513,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
