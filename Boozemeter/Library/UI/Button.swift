@@ -23,7 +23,7 @@ class Button: UIButton {
     
     // MARK: Setup
     func baseSetup() {
-        self.backgroundColor = ThemeManager.shared.theme.mainColor
+        self.backgroundColor = ThemeManager.shared.theme.accentColor
         
         self.layer.cornerRadius = 6.0
         self.addShadow()

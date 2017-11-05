@@ -10,9 +10,18 @@ import UIKit
 
 class DashboardHeaderView: View {
     
+    private let formatter = NumberFormatter()
+    
+    var concentrationValue: Double = 0 {
+        didSet {
+            let numberString = formatter.string(from: NSNumber(value: concentrationValue))!
+            concValueLabel.text = numberString + "‰"
+        }
+    }
+    
     // MARK: Views
     lazy var concTitleLabel: UILabel = {
-        let label = UILabel(textColor: theme.selectedTextColor, fontSize: 18.0, weight: .light)
+        let label = UILabel(textColor: theme.selectedTextColor, fontSize: 18.0)
         
         label.text = "Концентрация:"
         
@@ -55,7 +64,9 @@ class DashboardHeaderView: View {
     
     // MARK: Setup
     override func baseSetup() {
-        concValueLabel.text = "0.00‰"
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
         
         stateView.backgroundColor = .green
     }

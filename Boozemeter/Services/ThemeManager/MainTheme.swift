@@ -13,7 +13,7 @@ struct MainTheme: Theme {
     let backgroundColor: UIColor = UIColor(red: 235, green: 235, blue: 235, alpha: 1)
     
     let mainColor: UIColor = .blue
-    let accentColor: UIColor = .red
+    let accentColor: UIColor = .orange
     
     let textColor: UIColor = .black
     let selectedTextColor: UIColor = .white

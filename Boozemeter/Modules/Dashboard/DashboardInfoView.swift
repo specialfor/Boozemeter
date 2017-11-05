@@ -28,7 +28,7 @@ class DashboardInfoView: View {
         
         self.addSubview(label)
         label.snp.makeConstraints({ (make) in
-            make.top.equalTo(titleLabel.snp.bottom)
+            make.top.equalTo(titleLabel.snp.bottom).offset(8.0)
             make.left.right.equalTo(titleLabel)
             make.bottom.equalToSuperview().offset(-8.0)
         })

@@ -10,6 +10,8 @@ import UIKit
 
 class SliderView: View {
     
+    private(set) var formatter: NumberFormatter!
+    
     var formatString: String? {
         didSet {
             setCurrentValue(currentValue)
@@ -134,6 +136,11 @@ class SliderView: View {
     
     // MARK: Setup
     override func baseSetup() {
+        formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 0
+        
+        sliderView.tintColor = theme.mainColor
         sliderView.minimumValue = 0
         sliderView.maximumValue = 100
         sliderView.value = 50
@@ -152,7 +159,8 @@ class SliderView: View {
         sliderView.value = tempValue
         
         let formatString = self.formatString ?? "%@"
-        valueLabel.text = String(format: formatString, String(tempValue))
+        let numberString = formatter.string(from: NSNumber(value: tempValue)) ?? ""
+        valueLabel.text = String(format: formatString, numberString)
     }
 }
 
