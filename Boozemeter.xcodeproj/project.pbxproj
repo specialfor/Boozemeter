@@ -41,6 +41,11 @@
 		E7A8F76C1FAE7363005ACDE9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76B1FAE7363005ACDE9 /* UIViewControllerExtension.swift */; };
 		E7A8F76E1FAE7387005ACDE9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76D1FAE7387005ACDE9 /* UIViewExtension.swift */; };
 		E7A8F7701FAE74A3005ACDE9 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */; };
+		E7C5C0B51FAF8184003191F1 /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B41FAF8184003191F1 /* SharingService.swift */; };
+		E7C5C0B71FAF819B003191F1 /* Sharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B61FAF819B003191F1 /* Sharer.swift */; };
+		E7C5C0B91FAF81D5003191F1 /* FacebookSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B81FAF81D5003191F1 /* FacebookSharer.swift */; };
+		E7C5C0BB1FAF8200003191F1 /* TwitterSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0BA1FAF8200003191F1 /* TwitterSharer.swift */; };
+		E7C5C0BD1FAF8806003191F1 /* AlcoholLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0BC1FAF8806003191F1 /* AlcoholLevel.swift */; };
 		E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECEB1FAE1B6800955DBC /* SegmentControl.swift */; };
 		E7EFECEF1FAE1CAC00955DBC /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECEE1FAE1CAC00955DBC /* ThemeManager.swift */; };
 		E7EFECF21FAE1CBC00955DBC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFECF11FAE1CBC00955DBC /* Theme.swift */; };
@@ -86,6 +91,11 @@
 		E7A8F76B1FAE7363005ACDE9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E7A8F76D1FAE7387005ACDE9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		E7C5C0B41FAF8184003191F1 /* SharingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingService.swift; sourceTree = "<group>"; };
+		E7C5C0B61FAF819B003191F1 /* Sharer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sharer.swift; sourceTree = "<group>"; };
+		E7C5C0B81FAF81D5003191F1 /* FacebookSharer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSharer.swift; sourceTree = "<group>"; };
+		E7C5C0BA1FAF8200003191F1 /* TwitterSharer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterSharer.swift; sourceTree = "<group>"; };
+		E7C5C0BC1FAF8806003191F1 /* AlcoholLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholLevel.swift; sourceTree = "<group>"; };
 		E7EFECEB1FAE1B6800955DBC /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
 		E7EFECEE1FAE1CAC00955DBC /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		E7EFECF11FAE1CBC00955DBC /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -218,6 +228,7 @@
 		E78FE8801FADF345006C200F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E7C5C0B31FAF815D003191F1 /* SahringService */,
 				E72F8FE71FAF5C3900D90E90 /* AlcoholCalculator */,
 				E7EFECED1FAE1C9E00955DBC /* ThemeManager */,
 				E78FE8831FADF6CB006C200F /* AlertManager.swift */,
@@ -237,6 +248,7 @@
 				E72F8FCC1FAF01F700D90E90 /* Drink.swift */,
 				E72F8FD91FAF30E900D90E90 /* SelectedDrink.swift */,
 				E72F8FE31FAF525500D90E90 /* AlcoholState.swift */,
+				E7C5C0BC1FAF8806003191F1 /* AlcoholLevel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +289,17 @@
 				E72F8FCE1FAF04AA00D90E90 /* DrinkCell.swift */,
 			);
 			path = Drinks;
+			sourceTree = "<group>";
+		};
+		E7C5C0B31FAF815D003191F1 /* SahringService */ = {
+			isa = PBXGroup;
+			children = (
+				E7C5C0B41FAF8184003191F1 /* SharingService.swift */,
+				E7C5C0B61FAF819B003191F1 /* Sharer.swift */,
+				E7C5C0B81FAF81D5003191F1 /* FacebookSharer.swift */,
+				E7C5C0BA1FAF8200003191F1 /* TwitterSharer.swift */,
+			);
+			path = SahringService;
 			sourceTree = "<group>";
 		};
 		E7EFECED1FAE1C9E00955DBC /* ThemeManager */ = {
@@ -325,6 +348,11 @@
 					E779D7B81FADBBCA00C786EE = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -440,7 +468,9 @@
 				E7A8F7681FAE6FC8005ACDE9 /* View.swift in Sources */,
 				E72F8FD81FAF2F3100D90E90 /* AlcoholCalculator.swift in Sources */,
 				E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */,
+				E7C5C0BB1FAF8200003191F1 /* TwitterSharer.swift in Sources */,
 				E72F8FCB1FAEFE3500D90E90 /* DrinksCollectionViewLayout.swift in Sources */,
+				E7C5C0B51FAF8184003191F1 /* SharingService.swift in Sources */,
 				E72F8FE91FAF5D4400D90E90 /* TimeValue.swift in Sources */,
 				E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */,
 				E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */,
@@ -458,10 +488,13 @@
 				E7EFECF41FAE1D0200955DBC /* MainTheme.swift in Sources */,
 				E7EFECEF1FAE1CAC00955DBC /* ThemeManager.swift in Sources */,
 				E72F8FCD1FAF01F700D90E90 /* Drink.swift in Sources */,
+				E7C5C0BD1FAF8806003191F1 /* AlcoholLevel.swift in Sources */,
+				E7C5C0B91FAF81D5003191F1 /* FacebookSharer.swift in Sources */,
 				E72632C71FAE079500969976 /* InitialViewController.swift in Sources */,
 				E72F8FD61FAF24FA00D90E90 /* Button.swift in Sources */,
 				E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */,
 				E779D7D01FADCE7100C786EE /* Constants.swift in Sources */,
+				E7C5C0B71FAF819B003191F1 /* Sharer.swift in Sources */,
 				E7A8F7641FAE6DE7005ACDE9 /* UILabelExtension.swift in Sources */,
 				E72632CA1FAE09D900969976 /* SliderView.swift in Sources */,
 			);

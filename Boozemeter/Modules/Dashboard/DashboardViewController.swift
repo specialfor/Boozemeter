@@ -11,6 +11,11 @@ import UIKit
 class DashboardViewController: ViewController {
     
     var alcoholService: AlcoholStateService!
+    var alcoholLevel: AlcoholLevel? {
+        didSet {
+            setShareButton()
+        }
+    }
     
     // MARK: Views
     lazy var headerView: DashboardHeaderView = {
@@ -82,10 +87,6 @@ class DashboardViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        alcoholService = AlcoholStateService.shared
-        alcoholService.delegate = self
-        setupAlcoholState(alcoholService.alcoholState)
-        
         configureNavBar()
 
         resorptionTimeView.titleLabel.text = "Время вывода алкоголя:"
@@ -93,18 +94,40 @@ class DashboardViewController: ViewController {
         
         addButton.setTitle("+", for: .normal)
         addButton.addTarget(self, action: #selector(addTapped(_:)), for: .touchUpInside)
+        
+        // Confirure alcohol service
+        alcoholService = AlcoholStateService.shared
+        alcoholService.delegate = self
+        setupAlcoholState(alcoholService.alcoholState)
     }
     
     // MARK: Configuration
     private func configureNavBar() {
         navigationItem.hidesBackButton = true
         navigationItem.title = "Состояние"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(settingsTapped(_:)))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(settingsTapped(_:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
     }
     
     // MARK: Actions
     @objc private func settingsTapped(_ button: UIBarButtonItem) {
         // TODO: need to implement
+    }
+    
+    @objc private func shareTapped() {
+        let twitterAction = UIAlertAction(title: "Twitter", style: .default) { (action) in
+            let twitterSharer = TwitterSharer(title: nil, image: UIImage(named: self.alcoholLevel?.imageName ?? ""))
+            SharingService().share(with: twitterSharer)
+        }
+        
+        let facebookAction = UIAlertAction(title: "Facebook", style: .default) { (action) in
+            let facebookSharer = FacebookSharer(title: nil, image: UIImage(named: self.alcoholLevel?.imageName ?? ""))
+            SharingService().share(with: facebookSharer)
+        }
+        
+        let cancel = UIAlertAction(title: "Отменить", style: .cancel)
+        
+        AlertManager.sharedInstance.showActionSheet(title: "Поделиться", message: nil, actions: [twitterAction, facebookAction, cancel])
     }
     
     @objc private func addTapped(_ button: UIButton) {
@@ -113,6 +136,8 @@ class DashboardViewController: ViewController {
     
     // MARK: Private Methods
     private func setupAlcoholState(_ state: AlcoholState) {
+        alcoholLevel = AlcoholLevel(value: state.concentration)
+        
         headerView.concentrationValue = state.concentration
         
         let timestamp = Date().timeIntervalSince1970
@@ -132,6 +157,10 @@ class DashboardViewController: ViewController {
             
             resorptionDateView.valueLabel.text = dateFormatter.string(from: date)
         }
+    }
+    
+    private func setShareButton() {
+        navigationItem.rightBarButtonItem?.isEnabled = alcoholLevel != nil
     }
 }
 
