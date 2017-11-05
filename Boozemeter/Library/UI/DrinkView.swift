@@ -10,7 +10,7 @@ import UIKit
 
 class DrinkView: View {
     
-    var fontSize: CGFloat = 14.0 {
+    var fontSize: CGFloat = 11.0 {
         didSet {
             titleLabel.font = UIFont.systemFont(ofSize: fontSize)
         }

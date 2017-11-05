@@ -21,7 +21,7 @@ class FacebookSharer: NSObject, Sharer {
     
     func share() {
         let content = FBSDKShareLinkContent()
-        content.contentURL = URL(string: "https://www.facebook.com")
+        content.contentURL = URL(string: title ?? "")
         
         if let vc = UIApplication.shared.keyWindow?.rootViewController {
             FBSDKShareDialog.show(from: vc, with: content, delegate: nil)

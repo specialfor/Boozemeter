@@ -38,6 +38,10 @@ enum AlcoholLevel: Int {
         return AlcoholLevel.colors[self.rawValue]
     }
     
+    var link: String {
+        return AlcoholLevel.links[self.rawValue]
+    }
+    
     private static let images: [String] = [
         "weak",
         "norm",
@@ -50,5 +54,12 @@ enum AlcoholLevel: Int {
         .orange,
         .brown,
         .red
+    ]
+    
+    private static let links: [String] = [
+        "https://i.imgur.com/eivojAo.png",
+        "https://i.imgur.com/WJbd2SI.png",
+        "https://i.imgur.com/flY8FyZ.png",
+        "https://i.imgur.com/dN6jTk8.png"
     ]
 }

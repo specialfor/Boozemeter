@@ -121,7 +121,7 @@ class DashboardViewController: ViewController {
         }
         
         let facebookAction = UIAlertAction(title: "Facebook", style: .default) { (action) in
-            let facebookSharer = FacebookSharer(title: nil, image: UIImage(named: self.alcoholLevel?.imageName ?? ""))
+            let facebookSharer = FacebookSharer(title: self.alcoholLevel?.link, image: nil)
             SharingService().share(with: facebookSharer)
         }
         
