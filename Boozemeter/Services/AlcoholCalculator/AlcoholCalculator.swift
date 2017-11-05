@@ -34,7 +34,9 @@ class AlcoholCalculator {
     func calculateAlcoholState(from state: AlcoholState) -> AlcoholState {
         let concentration = self.calculateConcentration(with: state.concentration, from: state.timestamp)
         
-        return AlcoholState(concentration: concentration, timestamp: Date().timeIntervalSince1970)
+        let timestamp = Date().timeIntervalSince1970
+        
+        return AlcoholState(concentration: concentration, timestamp: timestamp, resorptionTimestamp: timeUntilSobering(concentration, timestamp: timestamp))
     }
     
     func calculateConcentration(with concentration: Double, from timestamp: TimeInterval) -> Double {
@@ -46,8 +48,8 @@ class AlcoholCalculator {
         return newConc
     }
     
-    func timeUntilSobering(_ concentration: Double, timeValue: TimeValue = .minutes) -> TimeInterval {
-        return 60 * timeValue.factor * (concentration / respCoef)
+    func timeUntilSobering(_ concentration: Double, timestamp: TimeInterval, timeValue: TimeValue = .seconds) -> TimeInterval {
+        return timestamp + 60 * timeValue.factor * (concentration / respCoef)
     }
     
 }

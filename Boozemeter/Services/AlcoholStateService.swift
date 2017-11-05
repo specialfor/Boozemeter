@@ -24,7 +24,7 @@ class AlcoholStateService {
     
     private let alcoholCalculator: AlcoholCalculator
     private var timer: Timer?
-    private let timeInterval: TimeInterval = 10
+    private let timeInterval: TimeInterval = 60
     
     // MARK: Singleton
     static let shared = AlcoholStateService()
@@ -49,14 +49,13 @@ class AlcoholStateService {
         
         alcoholState.concentration += concentration
         alcoholState.timestamp = Date().timeIntervalSince1970
+        alcoholState.resorptionTimestamp = alcoholCalculator.timeUntilSobering(alcoholState.concentration, timestamp: alcoholState.timestamp)
         
         delegate?.didAlcoholStateUpdated(self, state: alcoholState)
     }
     
     // MARK: Timer
     @objc private func timerFired() {
-        print("TIMER FIRED!")
-        
         alcoholState = alcoholCalculator.calculateAlcoholState(from: alcoholState)
         
         delegate?.didAlcoholStateUpdated(self, state: alcoholState)

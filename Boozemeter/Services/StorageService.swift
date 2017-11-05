@@ -30,7 +30,7 @@ class StorageService {
         if let alcoholState = read(modelOf: AlcoholState.self, forKey: Keys.alcoholState) {
             self.alcoholState = alcoholState
         } else {
-            self.alcoholState = AlcoholState(concentration: 0, timestamp: Date().timeIntervalSince1970)
+            self.alcoholState = AlcoholState(concentration: 0, timestamp: Date().timeIntervalSince1970, resorptionTimestamp: Date().timeIntervalSince1970)
         }
     }
     

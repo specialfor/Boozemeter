@@ -37,7 +37,7 @@ class InitialViewController: ViewController {
         
         self.view.addSubview(slider)
         slider.snp.makeConstraints({ (make) in
-            make.top.equalTo(titleLabel.snp.bottom).offset(8.0)
+            make.top.equalTo(titleLabel.snp.bottom).offset(24.0)
             make.left.right.equalTo(titleLabel)
         })
         

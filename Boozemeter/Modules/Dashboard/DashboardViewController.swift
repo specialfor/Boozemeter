@@ -115,17 +115,23 @@ class DashboardViewController: ViewController {
     private func setupAlcoholState(_ state: AlcoholState) {
         headerView.concentrationValue = state.concentration
         
-        let date = Date(timeIntervalSince1970: state.timestamp)
+        let timestamp = Date().timeIntervalSince1970
+        let delta = state.resorptionTimestamp - timestamp
         
-        let calendar = Calendar(identifier: .gregorian)
-        let components = calendar.dateComponents([.minute], from: date)
-        
-        resorptionTimeView.valueLabel.text = "через \(components.minute ?? 0) минут"
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE, MMM d, h:mm a"
-    
-        resorptionDateView.valueLabel.text = dateFormatter.string(from: date)
+        if  delta > 0 {
+            let minutes = Int(round(delta / 60))
+            
+            resorptionTimeView.valueLabel.text = "через \(minutes) минут"
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEEE, MMM d, h:mm a"
+            dateFormatter.locale = Locale.current
+            dateFormatter.timeZone = TimeZone.current
+            
+            let date = Date(timeIntervalSince1970: state.resorptionTimestamp)
+            
+            resorptionDateView.valueLabel.text = dateFormatter.string(from: date)
+        }
     }
 }
 

@@ -11,4 +11,5 @@ import Foundation
 struct AlcoholState: Codable {
     var concentration: Double
     var timestamp: TimeInterval
+    var resorptionTimestamp: TimeInterval
 }
