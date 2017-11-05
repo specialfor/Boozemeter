@@ -19,7 +19,6 @@ class SplashRouter {
     
     var rootViewController: UIViewController {
         if let _ = StorageService.default.person {
-            configureNavBar()
             showDashboard()
         } else {
             showInitial()
@@ -39,12 +38,20 @@ class SplashRouter {
     }
     
     func showDashboard() {
+        configureNavBar()
         showModule(DashboardViewController())
     }
     
-    private func showModule(_ viewController: UIViewController) {
-        navigationController.pushViewController(viewController, animated: true)
-        navigationController.viewControllers = [navigationController.viewControllers.last!]
+    func showDrinks() {
+        showModule(DrinksViewController(), popPrev: false)
+    }
+    
+    private func showModule(_ viewController: UIViewController, animated: Bool = true, popPrev: Bool = true) {
+        navigationController.pushViewController(viewController, animated: animated)
+        
+        if popPrev {
+            navigationController.viewControllers = [navigationController.viewControllers.last!]
+        }
     }
     
     private func configureNavBar() {

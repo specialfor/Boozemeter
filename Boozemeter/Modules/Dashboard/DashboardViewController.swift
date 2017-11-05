@@ -87,17 +87,23 @@ class DashboardViewController: ViewController {
         resorptionTimeView.titleLabel.text = "Время вывода алкоголя:"
         resorptionDateView.titleLabel.text = "Дата отрезвления:"
         
-        addButton.setTitle("A", for: .normal)
+        addButton.setTitle("+", for: .normal)
+        addButton.addTarget(self, action: #selector(addTapped(_:)), for: .touchUpInside)
     }
     
     // MARK: Configuration
     private func configureNavBar() {
+        navigationItem.hidesBackButton = true
         navigationItem.title = "Состояние"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(settingsTapped(_:)))
     }
     
     // MARK: Actions
     @objc private func settingsTapped(_ button: UIBarButtonItem) {
-        
+        // TODO: need to implement
+    }
+    
+    @objc private func addTapped(_ button: UIButton) {
+        SplashRouter.shared.showDrinks()
     }
 }
