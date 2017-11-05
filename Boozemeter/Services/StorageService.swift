@@ -12,22 +12,32 @@ class StorageService {
     
     private struct Keys {
         static let person = "person"
+        static let alcoholState = "alcoholState"
     }
     
     let userDefaults = UserDefaults.standard
     
     var person: Person?
     
+    var alcoholState: AlcoholState!
+    
     // MARK: Singleton
     static let `default` = StorageService()
     
     private init() {
         person = read(modelOf: Person.self, forKey: Keys.person)
+        
+        if let alcoholState = read(modelOf: AlcoholState.self, forKey: Keys.alcoholState) {
+            self.alcoholState = alcoholState
+        } else {
+            self.alcoholState = AlcoholState(concentration: 0, timestamp: Date().timeIntervalSince1970)
+        }
     }
     
     // MARK: Save
     func save() {
-        write(model: person, forKey: Keys.person)
+        let _ = write(model: person, forKey: Keys.person)
+        let _ = write(model: alcoholState, forKey: Keys.alcoholState)
     }
     
     // MARK: Write & read from defaults

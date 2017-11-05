@@ -19,6 +19,9 @@
 		E72F8FD61FAF24FA00D90E90 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD51FAF24FA00D90E90 /* Button.swift */; };
 		E72F8FD81FAF2F3100D90E90 /* AlcoholCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD71FAF2F3100D90E90 /* AlcoholCalculator.swift */; };
 		E72F8FDA1FAF30E900D90E90 /* SelectedDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD91FAF30E900D90E90 /* SelectedDrink.swift */; };
+		E72F8FE41FAF525600D90E90 /* AlcoholState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FE31FAF525500D90E90 /* AlcoholState.swift */; };
+		E72F8FE61FAF543B00D90E90 /* AlcoholStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FE51FAF543B00D90E90 /* AlcoholStateService.swift */; };
+		E72F8FE91FAF5D4400D90E90 /* TimeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FE81FAF5D4400D90E90 /* TimeValue.swift */; };
 		E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */; };
 		E779D7C41FADBBCA00C786EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C31FADBBCA00C786EE /* Assets.xcassets */; };
 		E779D7C71FADBBCA00C786EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C51FADBBCA00C786EE /* LaunchScreen.storyboard */; };
@@ -59,6 +62,9 @@
 		E72F8FD71FAF2F3100D90E90 /* AlcoholCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholCalculator.swift; sourceTree = "<group>"; };
 		E72F8FD91FAF30E900D90E90 /* SelectedDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDrink.swift; sourceTree = "<group>"; };
 		E72F8FDE1FAF3DEC00D90E90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E72F8FE31FAF525500D90E90 /* AlcoholState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholState.swift; sourceTree = "<group>"; };
+		E72F8FE51FAF543B00D90E90 /* AlcoholStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholStateService.swift; sourceTree = "<group>"; };
+		E72F8FE81FAF5D4400D90E90 /* TimeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeValue.swift; sourceTree = "<group>"; };
 		E779D7B91FADBBCA00C786EE /* Boozemeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boozemeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E779D7C31FADBBCA00C786EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,6 +164,15 @@
 			path = SelectDrink;
 			sourceTree = "<group>";
 		};
+		E72F8FE71FAF5C3900D90E90 /* AlcoholCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				E72F8FD71FAF2F3100D90E90 /* AlcoholCalculator.swift */,
+				E72F8FE81FAF5D4400D90E90 /* TimeValue.swift */,
+			);
+			path = AlcoholCalculator;
+			sourceTree = "<group>";
+		};
 		E779D7B01FADBBCA00C786EE = {
 			isa = PBXGroup;
 			children = (
@@ -203,11 +218,12 @@
 		E78FE8801FADF345006C200F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E72F8FE71FAF5C3900D90E90 /* AlcoholCalculator */,
 				E7EFECED1FAE1C9E00955DBC /* ThemeManager */,
 				E78FE8831FADF6CB006C200F /* AlertManager.swift */,
 				E78FE8811FADF363006C200F /* LocalAuthService.swift */,
 				E7A539F61FAE36F3005BB952 /* StorageService.swift */,
-				E72F8FD71FAF2F3100D90E90 /* AlcoholCalculator.swift */,
+				E72F8FE51FAF543B00D90E90 /* AlcoholStateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -220,6 +236,7 @@
 				E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */,
 				E72F8FCC1FAF01F700D90E90 /* Drink.swift */,
 				E72F8FD91FAF30E900D90E90 /* SelectedDrink.swift */,
+				E72F8FE31FAF525500D90E90 /* AlcoholState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -424,6 +441,7 @@
 				E72F8FD81FAF2F3100D90E90 /* AlcoholCalculator.swift in Sources */,
 				E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */,
 				E72F8FCB1FAEFE3500D90E90 /* DrinksCollectionViewLayout.swift in Sources */,
+				E72F8FE91FAF5D4400D90E90 /* TimeValue.swift in Sources */,
 				E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */,
 				E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */,
 				E72F8FD21FAF134100D90E90 /* SelectDrinkViewController.swift in Sources */,
@@ -433,6 +451,8 @@
 				E7A8F75D1FAE6332005ACDE9 /* DashboardViewController.swift in Sources */,
 				E7A539F51FAE3501005BB952 /* Person.swift in Sources */,
 				E72F8FD41FAF13DF00D90E90 /* DrinkView.swift in Sources */,
+				E72F8FE41FAF525600D90E90 /* AlcoholState.swift in Sources */,
+				E72F8FE61FAF543B00D90E90 /* AlcoholStateService.swift in Sources */,
 				E72F8FC91FAEFD7400D90E90 /* DrinksViewController.swift in Sources */,
 				E7A8F7701FAE74A3005ACDE9 /* Sex.swift in Sources */,
 				E7EFECF41FAE1D0200955DBC /* MainTheme.swift in Sources */,

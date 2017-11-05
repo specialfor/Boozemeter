@@ -8,30 +8,12 @@
 
 import Foundation
 
-enum TimeValue: Int {
-    case hours
-    case minutes
-    case seconds
-    case miliseconds
-    
-    var factor: Double {
-        return TimeValue.factors[self.rawValue]
-    }
-    
-    private static let factors: [Double] = [1/60, 1, 60, 60 * 100]
-}
-
 class AlcoholCalculator {
     
     private let density = 0.789
     private let sLength = 0.2
     private let sOffset = 0.1
     private let respCoef = 0.15
-    
-//    // TODO: set
-//    private(set) var currentConcentration: Double = 0
-//
-//    let person = StorageService.default.person
     
     func calculateConcentration(for person: Person, withDrink drink: SelectedDrink) -> Double {
         let sex = person.sex
@@ -47,6 +29,21 @@ class AlcoholCalculator {
         let concWithLosses = conc * (1 - (drink.satiety * sLength + sOffset))
         
         return concWithLosses
+    }
+    
+    func calculateAlcoholState(from state: AlcoholState) -> AlcoholState {
+        let concentration = self.calculateConcentration(with: state.concentration, from: state.timestamp)
+        
+        return AlcoholState(concentration: concentration, timestamp: Date().timeIntervalSince1970)
+    }
+    
+    func calculateConcentration(with concentration: Double, from timestamp: TimeInterval) -> Double {
+        
+        let timeInterval = Date().timeIntervalSince1970 - timestamp
+        
+        let newConc = max(concentration - (respCoef * timeInterval / TimeValue.seconds.factor / 60), 0)
+        
+        return newConc
     }
     
     func timeUntilSobering(_ concentration: Double, timeValue: TimeValue = .minutes) -> TimeInterval {

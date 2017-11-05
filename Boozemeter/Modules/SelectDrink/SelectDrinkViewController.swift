@@ -124,7 +124,7 @@ class SelectDrinkViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timeSlider.isHidden = false
+        timeSlider.isHidden = true
         
         calculateButton.setTitle("Посчитать", for: .normal)
         calculateButton.addTarget(self, action: #selector(calculateTapped), for: .touchUpInside)
@@ -138,7 +138,9 @@ class SelectDrinkViewController: ViewController {
         drink.satiety = Double(satietySlider.currentValue / 100.0)
         drink.time = Int(timeSlider.currentValue)
         
-        SplashRouter.shared.showDashboard(with: drink)
+        AlcoholStateService.shared.updateStateWith(drink: drink)
+        
+        SplashRouter.shared.dismissToDashboard()
     }
     
 }

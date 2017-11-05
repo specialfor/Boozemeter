@@ -10,17 +10,7 @@ import UIKit
 
 class DashboardViewController: ViewController {
     
-    var selectedDrink: SelectedDrink? {
-        didSet {
-            if let drink = selectedDrink {
-                let concentration = AlcoholCalculator().calculateConcentration(for: StorageService.default.person!, withDrink: drink)
-                
-                headerView.concValueLabel.text = "\(concentration) ‰"
-            } else {
-                headerView.concValueLabel.text = "0.00 ‰"
-            }   
-        }
-    }
+    var alcoholService: AlcoholStateService!
     
     // MARK: Views
     lazy var headerView: DashboardHeaderView = {
@@ -48,7 +38,7 @@ class DashboardViewController: ViewController {
             make.left.equalTo(inset)
             make.right.equalTo(-inset)
             
-            make.height.equalTo(50.0)
+            make.height.equalTo(60.0)
         })
         
         return view
@@ -63,7 +53,7 @@ class DashboardViewController: ViewController {
             make.top.equalTo(resorptionTimeView.snp.bottom).offset(16.0)
             make.left.right.equalTo(resorptionTimeView)
             
-            make.height.equalTo(50.0)
+            make.height.equalTo(60.0)
         })
         
         return view
@@ -92,6 +82,10 @@ class DashboardViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        alcoholService = AlcoholStateService.shared
+        alcoholService.delegate = self
+        setupAlcoholState(alcoholService.alcoholState)
+        
         configureNavBar()
 
         resorptionTimeView.titleLabel.text = "Время вывода алкоголя:"
@@ -116,4 +110,29 @@ class DashboardViewController: ViewController {
     @objc private func addTapped(_ button: UIButton) {
         SplashRouter.shared.showDrinks()
     }
+    
+    // MARK: Private Methods
+    private func setupAlcoholState(_ state: AlcoholState) {
+        headerView.concentrationValue = state.concentration
+        
+        let date = Date(timeIntervalSince1970: state.timestamp)
+        
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar.dateComponents([.minute], from: date)
+        
+        resorptionTimeView.valueLabel.text = "через \(components.minute ?? 0) минут"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMM d, h:mm a"
+    
+        resorptionDateView.valueLabel.text = dateFormatter.string(from: date)
+    }
+}
+
+extension DashboardViewController: AlcoholStateServiceDelegate {
+    
+    func didAlcoholStateUpdated(_ service: AlcoholStateService, state: AlcoholState) {
+        setupAlcoholState(state)
+    }
+    
 }
