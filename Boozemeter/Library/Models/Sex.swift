@@ -12,6 +12,7 @@ enum Sex: Int, Codable {
     
     private static let titles = ["Муж.", "Жен."]
     private static let factors = [0.7, 0.6]
+    private static let bmis = [23.5, 22.0]
     
     var title: String {
         return Sex.titles[self.rawValue]
@@ -19,5 +20,9 @@ enum Sex: Int, Codable {
     
     var factor: Double {
         return Sex.factors[self.rawValue]
+    }
+    
+    var bmi: Double {
+        return Sex.bmis[self.rawValue]
     }
 }
