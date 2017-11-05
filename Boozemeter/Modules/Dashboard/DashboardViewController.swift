@@ -64,6 +64,22 @@ class DashboardViewController: ViewController {
         return view
     }()
     
+    lazy var resetButton: UIButton = {
+        let button = UIButton()
+        
+        button.setTitle("Сбросить", for: .normal)
+        button.setTitleColor(theme.accentColor, for: .normal)
+        
+        self.view.addSubview(button)
+        button.snp.makeConstraints({ (make) in
+            make.top.equalTo(resorptionDateView.snp.bottom).offset(16.0)
+            make.left.right.equalTo(resorptionDateView)
+            make.height.equalTo(44.0)
+        })
+        
+        return button
+    }()
+    
     lazy var addButton: Button = {
         let button = Button()
         
@@ -94,6 +110,8 @@ class DashboardViewController: ViewController {
         
         addButton.setTitle("+", for: .normal)
         addButton.addTarget(self, action: #selector(addTapped(_:)), for: .touchUpInside)
+        
+        resetButton.addTarget(self, action: #selector(resetTapped), for: .touchUpInside)
         
         // Confirure alcohol service
         alcoholService = AlcoholStateService.shared
@@ -130,6 +148,12 @@ class DashboardViewController: ViewController {
         AlertManager.sharedInstance.showActionSheet(title: "Поделиться", message: nil, actions: [twitterAction, facebookAction, cancel])
     }
     
+    @objc private func resetTapped() {
+        AlertManager.sharedInstance.showAlertOkCancel(message: "Вы действительно хотите сбросить статус?", completionOk: {
+            self.alcoholService.resetState()
+        }, completionCancel: nil)
+    }
+    
     @objc private func addTapped(_ button: UIButton) {
         SplashRouter.shared.showDrinks()
     }
@@ -160,8 +184,13 @@ class DashboardViewController: ViewController {
     }
     
     private func setupLevel() {
-        navigationItem.rightBarButtonItem?.isEnabled = alcoholLevel != nil
+        let hasLevel = alcoholLevel != nil
+        
+        navigationItem.rightBarButtonItem?.isEnabled = hasLevel
         headerView.stateView.backgroundColor = alcoholLevel?.color ?? .clear
+        resetButton.isHidden = !hasLevel
+        resorptionDateView.isHidden = !hasLevel
+        resorptionTimeView.isHidden = !hasLevel
     }
 }
 

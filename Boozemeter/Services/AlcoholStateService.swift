@@ -54,6 +54,12 @@ class AlcoholStateService {
         delegate?.didAlcoholStateUpdated(self, state: alcoholState)
     }
     
+    func resetState() {
+        alcoholState = AlcoholState()
+        
+        delegate?.didAlcoholStateUpdated(self, state: alcoholState)
+    }
+    
     // MARK: Timer
     @objc private func timerFired() {
         alcoholState = alcoholCalculator.calculateAlcoholState(from: alcoholState)

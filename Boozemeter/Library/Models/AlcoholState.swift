@@ -12,4 +12,16 @@ struct AlcoholState: Codable {
     var concentration: Double
     var timestamp: TimeInterval
     var resorptionTimestamp: TimeInterval
+    
+    init() {
+        concentration = 0
+        timestamp = Date().timeIntervalSince1970
+        resorptionTimestamp = timestamp
+    }
+    
+    init(concentration: Double, timestamp: TimeInterval, resorptionTimestamp: TimeInterval) {
+        self.concentration = concentration
+        self.timestamp = timestamp
+        self.resorptionTimestamp = resorptionTimestamp
+    }
 }
