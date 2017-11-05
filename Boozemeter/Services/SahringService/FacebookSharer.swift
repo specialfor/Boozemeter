@@ -20,11 +20,11 @@ class FacebookSharer: NSObject, Sharer {
     }
     
     func share() {
-        let content = FBSDKSharePhotoContent()
-        content.photos = [FBSDKSharePhoto.init(image: image, userGenerated: false)]
+//        let content = FBSDKSharePhotoContent()
+//        content.photos = [FBSDKSharePhoto.init(image: image, userGenerated: false)]
 
-//        let content = FBSDKShareLinkContent()
-//        content.contentURL = URL(string: "https://www.facebook.com")
+        let content = FBSDKShareLinkContent()
+        content.contentURL = URL(string: "https://www.facebook.com")
         
         
         if let vc = UIApplication.shared.keyWindow?.rootViewController {
