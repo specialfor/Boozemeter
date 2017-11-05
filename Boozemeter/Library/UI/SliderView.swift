@@ -24,21 +24,30 @@ class SliderView: View {
     }
     
     // MARK: Values
-    var minValue: Float = 0 {
-        didSet {
-            sliderView.minimumValue = minValue
+    var minValue: Float {
+        get {
+            return sliderView.minimumValue
+        }
+        set {
+            sliderView.minimumValue = newValue
         }
     }
     
-    var maxValue: Float = 100 {
-        didSet {
-            sliderView.maximumValue = maxValue
+    var maxValue: Float {
+        get {
+            return sliderView.maximumValue
+        }
+        set {
+            sliderView.maximumValue = newValue
         }
     }
     
-    var currentValue: Float = 50 {
-        didSet {
-            setCurrentValue(currentValue)
+    var currentValue: Float {
+        get {
+            return sliderView.value
+        }
+        set {
+            setCurrentValue(newValue)
         }
     }
     
@@ -125,7 +134,9 @@ class SliderView: View {
     
     // MARK: Setup
     override func baseSetup() {
-        sliderView.isHidden = false
+        sliderView.minimumValue = 0
+        sliderView.maximumValue = 100
+        sliderView.value = 50
         
         sliderView.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
     }
