@@ -14,9 +14,10 @@ class DrinksViewController: ViewController {
     
     // MARK: Views
     lazy var collectionView: UICollectionView = {
-        let side: CGFloat = 90.0
+        let width: CGFloat = 90.0
+        let height: CGFloat = 120.0
         
-        let collView = UICollectionView(frame: CGRect.zero, collectionViewLayout: DrinksCollectionViewLayout(width: side, height: side))
+        let collView = UICollectionView(frame: CGRect.zero, collectionViewLayout: DrinksCollectionViewLayout(width: width, height: height))
         collView.backgroundColor = .clear
         
         collView.dataSource = self
@@ -47,7 +48,8 @@ class DrinksViewController: ViewController {
 extension DrinksViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO: show spreadsheet
+        
+        SplashRouter.shared.showSelectDrink(drinks[indexPath.row])
     }
     
 }

@@ -31,7 +31,9 @@ class InitialViewController: ViewController {
     }()
     
     lazy var heightSlider: SliderView = {
-        let slider = createSlider(with: "Рост:", min: 120, max: 210, current: 177)
+        let slider = SliderView(title: "Рост:", min: 120, max: 210, current: 177)
+        
+        slider.formatString = "%@ см."
         
         self.view.addSubview(slider)
         slider.snp.makeConstraints({ (make) in
@@ -43,7 +45,9 @@ class InitialViewController: ViewController {
     }()
     
     lazy var weightSlider: SliderView = {
-        let slider = createSlider(with: "Вес:", min: 40, max: 200, current: 70)
+        let slider = SliderView(title: "Вес:", min: 40, max: 200, current: 70)
+        
+        slider.formatString = "%@ кг."
         
         self.view.addSubview(slider)
         slider.snp.makeConstraints({ (make) in
@@ -68,13 +72,8 @@ class InitialViewController: ViewController {
         return segment
     }()
     
-    lazy var nextButton: UIButton = {
-        let button = UIButton()
-        
-        button.backgroundColor = ThemeManager.shared.theme.mainColor
-        
-        button.layer.cornerRadius = 6.0
-        button.addShadow()
+    lazy var nextButton: Button = {
+        let button = Button()
         
         let inset = 16.0
         let height = 44.0
@@ -118,15 +117,4 @@ class InitialViewController: ViewController {
         SplashRouter.shared.showDashboard()
     }
     
-    // MARK: Private methods
-    private func createSlider(with title: String, min: Float, max: Float, current: Float) -> SliderView {
-        let slider = SliderView()
-        
-        slider.titleLabel.text = title
-        slider.minValue = min
-        slider.maxValue = max
-        slider.currentValue = current
-        
-        return slider
-    }
 }

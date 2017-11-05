@@ -46,6 +46,12 @@ class SplashRouter {
         showModule(DrinksViewController(), popPrev: false)
     }
     
+    func showSelectDrink(_ drink: Drink) {
+        let viewController = SelectDrinkViewController()
+        viewController.drink = drink
+        showModule(viewController, popPrev: false)
+    }
+    
     private func showModule(_ viewController: UIViewController, animated: Bool = true, popPrev: Bool = true) {
         navigationController.pushViewController(viewController, animated: animated)
         

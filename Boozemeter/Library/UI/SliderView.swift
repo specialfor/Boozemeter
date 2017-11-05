@@ -10,6 +10,12 @@ import UIKit
 
 class SliderView: View {
     
+    var formatString: String? {
+        didSet {
+            setCurrentValue(currentValue)
+        }
+    }
+    
     var fontSize: CGFloat = 14.0 {
         didSet {
             titleLabel.font = UIFont.systemFont(ofSize: fontSize)
@@ -32,8 +38,7 @@ class SliderView: View {
     
     var currentValue: Float = 50 {
         didSet {
-            sliderView.value = currentValue
-            valueLabel.text = String(currentValue)
+            setCurrentValue(currentValue)
         }
     }
     
@@ -100,6 +105,24 @@ class SliderView: View {
         self.fontSize = fontSize
     }
     
+    convenience init(title: String) {
+        self.init(frame: CGRect.zero)
+        
+        self.titleLabel.text = title
+    }
+    
+    convenience init(title: String, min: Float, max: Float, current: Float) {
+        self.init(title: title)
+        
+        setValues(min: min, max: max, current: current)
+    }
+    
+    private func setValues(min: Float, max: Float, current: Float) {
+        self.minValue = min
+        self.maxValue = max
+        self.currentValue = current
+    }
+    
     // MARK: Setup
     override func baseSetup() {
         sliderView.isHidden = false
@@ -109,8 +132,16 @@ class SliderView: View {
     
     // MARK: Actions
     @objc private func valueChanged(_ slider: UISlider) {
-        sliderView.value = round(slider.value)
-        valueLabel.text = String(slider.value)
+        setCurrentValue(slider.value)
+    }
+    
+    private func setCurrentValue(_ value: Float) {
+        let tempValue = round(value)
+        
+        sliderView.value = tempValue
+        
+        let formatString = self.formatString ?? "%@"
+        valueLabel.text = String(format: formatString, String(tempValue))
     }
 }
 

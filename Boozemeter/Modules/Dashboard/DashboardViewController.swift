@@ -57,15 +57,13 @@ class DashboardViewController: ViewController {
         return view
     }()
     
-    lazy var addButton: UIButton = {
-        let button = UIButton()
+    lazy var addButton: Button = {
+        let button = Button()
         
         button.backgroundColor = theme.accentColor
         
         let width: CGFloat = 52.0
-        
         button.layer.cornerRadius = width / 2
-        button.addShadow()
         
         let inset = 16.0
         

@@ -11,43 +11,21 @@ import UIKit
 class DrinkCell: UICollectionViewCell {
     
     // MARK: View lifecycle
-    lazy var imageView: UIImageView = {
-        let imgView = UIImageView()
+    lazy var drinkView: DrinkView = {
+        let view = DrinkView()
         
-        imgView.contentMode = .scaleAspectFit
-        
-        let side = 80
-        
-        self.contentView.addSubview(imgView)
-        imgView.snp.makeConstraints({ (make) in
-            make.center.equalToSuperview()
-            make.width.height.equalTo(side)
+        self.contentView.addSubview(view)
+        view.snp.makeConstraints({ (make) in
+            make.edges.equalToSuperview()
         })
         
-        return imgView
-    }()
-    
-    lazy var titleLabel: UILabel = {
-        let label = UILabel(textColor: theme.textColor, fontSize: 14.0)
-        
-        label.textAlignment = .center
-        
-        let inset = 8.0
-        
-        self.contentView.addSubview(label)
-        label.snp.makeConstraints({ (make) in
-            make.top.equalTo(imageView.snp.bottom).offset(inset)
-            make.left.equalTo(inset)
-            make.right.equalTo(-inset)
-        })
-        
-        return label
+        return view
     }()
     
     // MARK: Setup
     func setup(with drink: Drink) {
-        imageView.image = UIImage(named: drink.imageName)
-        titleLabel.text = drink.title
+        drinkView.imageView.image = UIImage(named: drink.imageName)
+        drinkView.titleLabel.text = drink.title
     }
     
 }

@@ -14,6 +14,9 @@
 		E72F8FCB1FAEFE3500D90E90 /* DrinksCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FCA1FAEFE3500D90E90 /* DrinksCollectionViewLayout.swift */; };
 		E72F8FCD1FAF01F700D90E90 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FCC1FAF01F700D90E90 /* Drink.swift */; };
 		E72F8FCF1FAF04AA00D90E90 /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FCE1FAF04AA00D90E90 /* DrinkCell.swift */; };
+		E72F8FD21FAF134100D90E90 /* SelectDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD11FAF134100D90E90 /* SelectDrinkViewController.swift */; };
+		E72F8FD41FAF13DF00D90E90 /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD31FAF13DF00D90E90 /* DrinkView.swift */; };
+		E72F8FD61FAF24FA00D90E90 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FD51FAF24FA00D90E90 /* Button.swift */; };
 		E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */; };
 		E779D7C41FADBBCA00C786EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C31FADBBCA00C786EE /* Assets.xcassets */; };
 		E779D7C71FADBBCA00C786EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C51FADBBCA00C786EE /* LaunchScreen.storyboard */; };
@@ -48,6 +51,9 @@
 		E72F8FCA1FAEFE3500D90E90 /* DrinksCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCollectionViewLayout.swift; sourceTree = "<group>"; };
 		E72F8FCC1FAF01F700D90E90 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		E72F8FCE1FAF04AA00D90E90 /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
+		E72F8FD11FAF134100D90E90 /* SelectDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDrinkViewController.swift; sourceTree = "<group>"; };
+		E72F8FD31FAF13DF00D90E90 /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
+		E72F8FD51FAF24FA00D90E90 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		E779D7B91FADBBCA00C786EE /* Boozemeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boozemeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E779D7C31FADBBCA00C786EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 		E72632C41FAE02F300969976 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E72F8FD01FAF132F00D90E90 /* SelectDrink */,
 				E7A8F7711FAE793D005ACDE9 /* Drinks */,
 				E7A8F75B1FAE6317005ACDE9 /* Dashboard */,
 				E7A539FA1FAE4E4A005BB952 /* Splash */,
@@ -132,8 +139,18 @@
 				E7EFECEB1FAE1B6800955DBC /* SegmentControl.swift */,
 				E7A8F7671FAE6FC8005ACDE9 /* View.swift */,
 				E7A8F7691FAE7337005ACDE9 /* ViewController.swift */,
+				E72F8FD31FAF13DF00D90E90 /* DrinkView.swift */,
+				E72F8FD51FAF24FA00D90E90 /* Button.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		E72F8FD01FAF132F00D90E90 /* SelectDrink */ = {
+			isa = PBXGroup;
+			children = (
+				E72F8FD11FAF134100D90E90 /* SelectDrinkViewController.swift */,
+			);
+			path = SelectDrink;
 			sourceTree = "<group>";
 		};
 		E779D7B01FADBBCA00C786EE = {
@@ -401,16 +418,19 @@
 				E72F8FCB1FAEFE3500D90E90 /* DrinksCollectionViewLayout.swift in Sources */,
 				E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */,
 				E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */,
+				E72F8FD21FAF134100D90E90 /* SelectDrinkViewController.swift in Sources */,
 				E7A8F76A1FAE7337005ACDE9 /* ViewController.swift in Sources */,
 				E72F8FCF1FAF04AA00D90E90 /* DrinkCell.swift in Sources */,
 				E7A8F75D1FAE6332005ACDE9 /* DashboardViewController.swift in Sources */,
 				E7A539F51FAE3501005BB952 /* Person.swift in Sources */,
+				E72F8FD41FAF13DF00D90E90 /* DrinkView.swift in Sources */,
 				E72F8FC91FAEFD7400D90E90 /* DrinksViewController.swift in Sources */,
 				E7A8F7701FAE74A3005ACDE9 /* Sex.swift in Sources */,
 				E7EFECF41FAE1D0200955DBC /* MainTheme.swift in Sources */,
 				E7EFECEF1FAE1CAC00955DBC /* ThemeManager.swift in Sources */,
 				E72F8FCD1FAF01F700D90E90 /* Drink.swift in Sources */,
 				E72632C71FAE079500969976 /* InitialViewController.swift in Sources */,
+				E72F8FD61FAF24FA00D90E90 /* Button.swift in Sources */,
 				E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */,
 				E779D7D01FADCE7100C786EE /* Constants.swift in Sources */,
 				E7A8F7641FAE6DE7005ACDE9 /* UILabelExtension.swift in Sources */,
