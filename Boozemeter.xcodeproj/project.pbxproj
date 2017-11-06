@@ -43,6 +43,7 @@
 		E7A8F7701FAE74A3005ACDE9 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */; };
 		E7AFE1091FB0E896008A46C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7AFE10B1FB0E896008A46C3 /* Localizable.strings */; };
 		E7AFE1111FB0EE0F008A46C3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AFE1101FB0EE0F008A46C3 /* StringExtension.swift */; };
+		E7AFE1131FB105DC008A46C3 /* TTSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AFE1121FB105DC008A46C3 /* TTSegmentedControl.swift */; };
 		E7BAA3751FB04FA900E6975C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAA3741FB04FA900E6975C /* SettingsViewController.swift */; };
 		E7C5C0B51FAF8184003191F1 /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B41FAF8184003191F1 /* SharingService.swift */; };
 		E7C5C0B71FAF819B003191F1 /* Sharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B61FAF819B003191F1 /* Sharer.swift */; };
@@ -100,6 +101,7 @@
 		E7AFE10E1FB0E93B008A46C3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E7AFE10F1FB0E93B008A46C3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E7AFE1101FB0EE0F008A46C3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E7AFE1121FB105DC008A46C3 /* TTSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSegmentedControl.swift; sourceTree = "<group>"; };
 		E7BAA3741FB04FA900E6975C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E7C5C0B41FAF8184003191F1 /* SharingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingService.swift; sourceTree = "<group>"; };
 		E7C5C0B61FAF819B003191F1 /* Sharer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sharer.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		E72632C81FAE09CD00969976 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E7AFE1121FB105DC008A46C3 /* TTSegmentedControl.swift */,
 				E7A8F7621FAE6DDB005ACDE9 /* Extensions */,
 				E72632C91FAE09D900969976 /* SliderView.swift */,
 				E7EFECEB1FAE1B6800955DBC /* SegmentControl.swift */,
@@ -448,7 +451,6 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/TTSegmentedControl/TTSegmentedControl.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -456,7 +458,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTSegmentedControl.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -505,6 +506,7 @@
 				E72F8FCB1FAEFE3500D90E90 /* DrinksCollectionViewLayout.swift in Sources */,
 				E7C5C0B51FAF8184003191F1 /* SharingService.swift in Sources */,
 				E72F8FE91FAF5D4400D90E90 /* TimeValue.swift in Sources */,
+				E7AFE1131FB105DC008A46C3 /* TTSegmentedControl.swift in Sources */,
 				E7EFECEC1FAE1B6800955DBC /* SegmentControl.swift in Sources */,
 				E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */,
 				E72F8FD21FAF134100D90E90 /* SelectDrinkViewController.swift in Sources */,

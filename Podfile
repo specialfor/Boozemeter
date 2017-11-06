@@ -10,5 +10,4 @@ target 'Boozemeter' do
   pod 'FBSDKShareKit', '~> 4.27'
   pod 'TwitterKit', '~> 3.2'
   pod 'SnapKit', '~> 4.0.0' 
-  pod 'TTSegmentedControl'
 end

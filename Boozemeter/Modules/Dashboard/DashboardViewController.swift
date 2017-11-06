@@ -69,10 +69,19 @@ class DashboardViewController: ViewController {
         button.setTitle(Constants.LocalizableKeys.reset.localized, for: .normal)
         button.setTitleColor(theme.accentColor, for: .normal)
         
+        button.backgroundColor = .clear
+        
+        button.layer.cornerRadius = 6.0
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = theme.accentColor.cgColor
+        
+        button.setContentCompressionResistancePriority(.required, for: .horizontal)
+        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        
         self.view.addSubview(button)
         button.snp.makeConstraints({ (make) in
             make.top.equalTo(resorptionDateView.snp.bottom).offset(16.0)
-            make.left.right.equalTo(resorptionDateView)
+            make.centerX.equalToSuperview()
             make.height.equalTo(44.0)
         })
         

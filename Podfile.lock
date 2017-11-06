@@ -10,7 +10,6 @@ PODS:
   - FBSDKShareKit (4.27.0):
     - FBSDKCoreKit
   - SnapKit (4.0.0)
-  - TTSegmentedControl (0.4.3)
   - TwitterCore (3.0.2)
   - TwitterKit (3.2.1):
     - TwitterCore (>= 3.0.2)
@@ -19,7 +18,6 @@ DEPENDENCIES:
   - FBSDKCoreKit (~> 4.27)
   - FBSDKShareKit (~> 4.27)
   - SnapKit (~> 4.0.0)
-  - TTSegmentedControl
   - TwitterKit (~> 3.2)
 
 SPEC CHECKSUMS:
@@ -27,10 +25,9 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: ebc6c5f5b3f0e72396041050e2266781a38ac587
   FBSDKShareKit: 4f83956d4ca2960730fe7588a168eb8d535c06dc
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  TTSegmentedControl: c1e5321f8d5994f4e01e0d0135bf188596452a3b
   TwitterCore: e0420b01e02e7d20e94690e37f43e75de219ab8d
   TwitterKit: 205ac89824bbfe9e85a16c420d30bb7bcbedac45
 
-PODFILE CHECKSUM: 2e53cbe52a3cafa6d9c7e5b0507cbe7f07d33cef
+PODFILE CHECKSUM: e9c49f33c789c211d42d25f2cb251ec8b197d506
 
 COCOAPODS: 1.3.1
