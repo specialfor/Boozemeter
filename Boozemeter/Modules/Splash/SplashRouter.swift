@@ -56,6 +56,10 @@ class SplashRouter {
         showModule(viewController, popPrev: false)
     }
     
+    func showSettings() {
+        showModule(SettingsViewController(), popPrev: false)
+    }
+    
     private func showModule(_ viewController: UIViewController, animated: Bool = true, popPrev: Bool = true) {
         navigationController.pushViewController(viewController, animated: animated)
         

@@ -30,7 +30,6 @@
 		E78FE8841FADF6CB006C200F /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78FE8831FADF6CB006C200F /* AlertManager.swift */; };
 		E7A539F51FAE3501005BB952 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A539F41FAE3501005BB952 /* Person.swift */; };
 		E7A539F71FAE36F3005BB952 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A539F61FAE36F3005BB952 /* StorageService.swift */; };
-		E7A539F91FAE4D6E005BB952 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A539F81FAE4D6E005BB952 /* Settings.swift */; };
 		E7A539FC1FAE4E69005BB952 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A539FB1FAE4E69005BB952 /* SplashRouter.swift */; };
 		E7A8F75D1FAE6332005ACDE9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F75C1FAE6332005ACDE9 /* DashboardViewController.swift */; };
 		E7A8F75F1FAE6B84005ACDE9 /* DashboardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F75E1FAE6B84005ACDE9 /* DashboardHeaderView.swift */; };
@@ -41,6 +40,7 @@
 		E7A8F76C1FAE7363005ACDE9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76B1FAE7363005ACDE9 /* UIViewControllerExtension.swift */; };
 		E7A8F76E1FAE7387005ACDE9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76D1FAE7387005ACDE9 /* UIViewExtension.swift */; };
 		E7A8F7701FAE74A3005ACDE9 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */; };
+		E7BAA3751FB04FA900E6975C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAA3741FB04FA900E6975C /* SettingsViewController.swift */; };
 		E7C5C0B51FAF8184003191F1 /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B41FAF8184003191F1 /* SharingService.swift */; };
 		E7C5C0B71FAF819B003191F1 /* Sharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B61FAF819B003191F1 /* Sharer.swift */; };
 		E7C5C0B91FAF81D5003191F1 /* FacebookSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B81FAF81D5003191F1 /* FacebookSharer.swift */; };
@@ -80,7 +80,6 @@
 		E78FE8831FADF6CB006C200F /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		E7A539F41FAE3501005BB952 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E7A539F61FAE36F3005BB952 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
-		E7A539F81FAE4D6E005BB952 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E7A539FB1FAE4E69005BB952 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		E7A8F75C1FAE6332005ACDE9 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		E7A8F75E1FAE6B84005ACDE9 /* DashboardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderView.swift; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		E7A8F76B1FAE7363005ACDE9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E7A8F76D1FAE7387005ACDE9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		E7BAA3741FB04FA900E6975C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E7C5C0B41FAF8184003191F1 /* SharingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingService.swift; sourceTree = "<group>"; };
 		E7C5C0B61FAF819B003191F1 /* Sharer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sharer.swift; sourceTree = "<group>"; };
 		E7C5C0B81FAF81D5003191F1 /* FacebookSharer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSharer.swift; sourceTree = "<group>"; };
@@ -135,6 +135,7 @@
 		E72632C41FAE02F300969976 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E7BAA3731FB04F9700E6975C /* Settings */,
 				E72F8FD01FAF132F00D90E90 /* SelectDrink */,
 				E7A8F7711FAE793D005ACDE9 /* Drinks */,
 				E7A8F75B1FAE6317005ACDE9 /* Dashboard */,
@@ -243,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				E7A539F41FAE3501005BB952 /* Person.swift */,
-				E7A539F81FAE4D6E005BB952 /* Settings.swift */,
 				E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */,
 				E72F8FCC1FAF01F700D90E90 /* Drink.swift */,
 				E72F8FD91FAF30E900D90E90 /* SelectedDrink.swift */,
@@ -289,6 +289,14 @@
 				E72F8FCE1FAF04AA00D90E90 /* DrinkCell.swift */,
 			);
 			path = Drinks;
+			sourceTree = "<group>";
+		};
+		E7BAA3731FB04F9700E6975C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E7BAA3741FB04FA900E6975C /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		E7C5C0B31FAF815D003191F1 /* SahringService */ = {
@@ -464,7 +472,7 @@
 				E7A8F7611FAE6CF6005ACDE9 /* DashboardInfoView.swift in Sources */,
 				E7A539F71FAE36F3005BB952 /* StorageService.swift in Sources */,
 				E7A8F76C1FAE7363005ACDE9 /* UIViewControllerExtension.swift in Sources */,
-				E7A539F91FAE4D6E005BB952 /* Settings.swift in Sources */,
+				E7BAA3751FB04FA900E6975C /* SettingsViewController.swift in Sources */,
 				E7A8F7681FAE6FC8005ACDE9 /* View.swift in Sources */,
 				E72F8FD81FAF2F3100D90E90 /* AlcoholCalculator.swift in Sources */,
 				E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */,

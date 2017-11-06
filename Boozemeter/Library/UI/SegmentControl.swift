@@ -21,7 +21,7 @@ class SegmentControl: View {
         get {
             return segmentControl.currentIndex
         } set {
-            segmentControl.selectItemAt(index: currentIndex, animated: false)
+            segmentControl.selectItemAt(index: newValue)
         }
     }
     
@@ -66,7 +66,7 @@ class SegmentControl: View {
         
         let theme = ThemeManager.shared.theme
         
-        segment.containerBackgroundColor = theme.backgroundColor
+        segment.containerBackgroundColor = theme.lightGreyTextColor
         segment.defaultTextColor = theme.textColor
         segment.selectedTextColor = theme.selectedTextColor
         segment.thumbColor = theme.mainColor

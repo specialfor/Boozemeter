@@ -95,8 +95,6 @@ class InitialViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.white
-        
         titleLabel.text = "Введите персональные данные"
         
         sexSegment.titleLabel.text = "Пол:"

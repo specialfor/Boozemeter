@@ -25,6 +25,10 @@ class SliderView: View {
         }
     }
     
+    // MARK: Actions property
+    private var target: Any?
+    private var selector: Selector?
+    
     // MARK: Values
     var minValue: Float {
         get {
@@ -151,6 +155,10 @@ class SliderView: View {
     // MARK: Actions
     @objc private func valueChanged(_ slider: UISlider) {
         setCurrentValue(slider.value)
+        
+        if let object = self.target as? NSObject {
+            object.perform(self.selector, with: self)
+        }
     }
     
     private func setCurrentValue(_ value: Float) {
@@ -161,6 +169,14 @@ class SliderView: View {
         let formatString = self.formatString ?? "%@"
         let numberString = formatter.string(from: NSNumber(value: tempValue)) ?? ""
         valueLabel.text = String(format: formatString, numberString)
+    }
+    
+    // MARK: Actions
+    func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControlEvents) {
+        if (controlEvents == .valueChanged) {
+            self.target = target
+            self.selector = action
+        }
     }
 }
 

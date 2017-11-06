@@ -13,13 +13,14 @@ class StorageService {
     private struct Keys {
         static let person = "person"
         static let alcoholState = "alcoholState"
+        static let shouldUseTouchId = "shouldUseTouchId"
     }
     
     let userDefaults = UserDefaults.standard
     
     var person: Person?
-    
     var alcoholState: AlcoholState!
+    var shouldUseTouchId: Bool!
     
     // MARK: Singleton
     static let `default` = StorageService()
@@ -32,12 +33,15 @@ class StorageService {
         } else {
             self.alcoholState = AlcoholState()
         }
+        
+        self.shouldUseTouchId = UserDefaults.standard.bool(forKey: Keys.shouldUseTouchId)
     }
     
     // MARK: Save
     func save() {
         let _ = write(model: person, forKey: Keys.person)
         let _ = write(model: alcoholState, forKey: Keys.alcoholState)
+        UserDefaults.standard.set(shouldUseTouchId, forKey: Keys.shouldUseTouchId)
     }
     
     // MARK: Write & read from defaults
@@ -66,4 +70,5 @@ class StorageService {
         let decoder = JSONDecoder()
         return try? decoder.decode(type, from: data)
     }
+    
 }

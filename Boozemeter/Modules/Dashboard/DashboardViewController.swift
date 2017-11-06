@@ -129,7 +129,7 @@ class DashboardViewController: ViewController {
     
     // MARK: Actions
     @objc private func settingsTapped(_ button: UIBarButtonItem) {
-        // TODO: need to implement
+        SplashRouter.shared.showSettings()
     }
     
     @objc private func shareTapped() {

@@ -43,7 +43,7 @@ class AlcoholStateService {
         timer = nil
     }
     
-    // MARK:
+    // MARK: Alco status
     func updateStateWith(drink: SelectedDrink) {
         let concentration = alcoholCalculator.calculateConcentration(for: StorageService.default.person!, withDrink: drink)
         
@@ -58,6 +58,10 @@ class AlcoholStateService {
         alcoholState = AlcoholState()
         
         delegate?.didAlcoholStateUpdated(self, state: alcoholState)
+    }
+    
+    func recalculateState() {
+        // TODO: recalculate state
     }
     
     // MARK: Timer

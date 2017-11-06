@@ -20,12 +20,18 @@ protocol Theme {
     
     var darkGreyTextColor: UIColor { get }
     
+    var lightGreyTextColor: UIColor { get }
+    
 }
 
 extension Theme {
     
     var darkGreyTextColor: UIColor {
         return UIColor.darkGray
+    }
+    
+    var lightGreyTextColor: UIColor {
+        return UIColor.lightGray
     }
     
 }
