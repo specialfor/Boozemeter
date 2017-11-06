@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/iOS%20version-10%2B-orange.svg)
 ![](https://img.shields.io/badge/Xcode%20version-9%2B-orange.svg)
 
-# About
+# Опис
 Тестове завдання в категорії Mobile App хакатону IT-REVOLUTION`17
 
 Для розрахунку стану користувача використовувалсь формула Відмарка (ознайомитись с формулами можете в файлі [**formula.txt**](http://github.com)).
@@ -51,4 +51,4 @@
 ![Шаринг в Facebook та Twitter](https://i.imgur.com/JhGEbiD.png)
 ![Шаринг в Twitter](https://i.imgur.com/fIjHGSq.png)
 
-3. Локалізація тьрома мовами: Українська, Російська, Англійська
+3. Локалізація тьрома мовами: українська, російська, англійська
