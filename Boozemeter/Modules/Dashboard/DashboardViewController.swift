@@ -133,12 +133,12 @@ class DashboardViewController: ViewController {
     
     @objc private func shareTapped() {
         let twitterAction = UIAlertAction(title: "Twitter", style: .default) { (action) in
-            let twitterSharer = TwitterSharer(title: nil, image: UIImage(named: self.alcoholLevel?.imageName ?? ""))
+            let twitterSharer = TwitterSharer(title: nil, image: UIImage(named: self.alcoholLevel?.imageName ?? AlcoholLevel.weak.imageName))
             SharingService().share(with: twitterSharer)
         }
         
         let facebookAction = UIAlertAction(title: "Facebook", style: .default) { (action) in
-            let facebookSharer = FacebookSharer(title: self.alcoholLevel?.link, image: nil)
+            let facebookSharer = FacebookSharer(title: self.alcoholLevel?.link ?? AlcoholLevel.weak.link, image: nil)
             SharingService().share(with: facebookSharer)
         }
         
@@ -183,7 +183,7 @@ class DashboardViewController: ViewController {
     }
     
     private func setupLevel() {
-        let hasLevel = alcoholLevel != nil
+        let hasLevel = alcoholLevel != nil || alcoholService.alcoholState.concentration > 0
         
         navigationItem.rightBarButtonItem?.isEnabled = hasLevel
         headerView.stateView.backgroundColor = alcoholLevel?.color ?? .clear
