@@ -22,6 +22,7 @@
 		E72F8FE41FAF525600D90E90 /* AlcoholState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FE31FAF525500D90E90 /* AlcoholState.swift */; };
 		E72F8FE61FAF543B00D90E90 /* AlcoholStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FE51FAF543B00D90E90 /* AlcoholStateService.swift */; };
 		E72F8FE91FAF5D4400D90E90 /* TimeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72F8FE81FAF5D4400D90E90 /* TimeValue.swift */; };
+		E743B5801FB0768500F72F92 /* AccessDeclinedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E743B57F1FB0768500F72F92 /* AccessDeclinedViewController.swift */; };
 		E779D7BD1FADBBCA00C786EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */; };
 		E779D7C41FADBBCA00C786EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C31FADBBCA00C786EE /* Assets.xcassets */; };
 		E779D7C71FADBBCA00C786EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E779D7C51FADBBCA00C786EE /* LaunchScreen.storyboard */; };
@@ -70,6 +71,7 @@
 		E72F8FE31FAF525500D90E90 /* AlcoholState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholState.swift; sourceTree = "<group>"; };
 		E72F8FE51FAF543B00D90E90 /* AlcoholStateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholStateService.swift; sourceTree = "<group>"; };
 		E72F8FE81FAF5D4400D90E90 /* TimeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeValue.swift; sourceTree = "<group>"; };
+		E743B57F1FB0768500F72F92 /* AccessDeclinedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessDeclinedViewController.swift; sourceTree = "<group>"; };
 		E779D7B91FADBBCA00C786EE /* Boozemeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boozemeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E779D7C31FADBBCA00C786EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		E72632C41FAE02F300969976 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E743B57E1FB0766A00F72F92 /* AccessDeclined */,
 				E7BAA3731FB04F9700E6975C /* Settings */,
 				E72F8FD01FAF132F00D90E90 /* SelectDrink */,
 				E7A8F7711FAE793D005ACDE9 /* Drinks */,
@@ -182,6 +185,14 @@
 				E72F8FE81FAF5D4400D90E90 /* TimeValue.swift */,
 			);
 			path = AlcoholCalculator;
+			sourceTree = "<group>";
+		};
+		E743B57E1FB0766A00F72F92 /* AccessDeclined */ = {
+			isa = PBXGroup;
+			children = (
+				E743B57F1FB0768500F72F92 /* AccessDeclinedViewController.swift */,
+			);
+			path = AccessDeclined;
 			sourceTree = "<group>";
 		};
 		E779D7B01FADBBCA00C786EE = {
@@ -490,6 +501,7 @@
 				E7A539F51FAE3501005BB952 /* Person.swift in Sources */,
 				E72F8FD41FAF13DF00D90E90 /* DrinkView.swift in Sources */,
 				E72F8FE41FAF525600D90E90 /* AlcoholState.swift in Sources */,
+				E743B5801FB0768500F72F92 /* AccessDeclinedViewController.swift in Sources */,
 				E72F8FE61FAF543B00D90E90 /* AlcoholStateService.swift in Sources */,
 				E72F8FC91FAEFD7400D90E90 /* DrinksViewController.swift in Sources */,
 				E7A8F7701FAE74A3005ACDE9 /* Sex.swift in Sources */,

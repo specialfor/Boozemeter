@@ -132,7 +132,19 @@ class SettingsViewController: ViewController {
     }
     
     @objc private func touchIdChanged(_ segmentControl: SegmentControl) {
-        StorageService.default.shouldUseTouchId = segmentControl.currentIndex == 1
+        let index = segmentControl.currentIndex
+        
+        if index == 1 {
+            let auth = LocalAuthService()
+            
+            if auth.canAuth(with: .passcode) {
+                StorageService.default.shouldUseTouchId = true
+            } else {
+                segmentControl.currentIndex = 0
+            }
+        } else {
+            StorageService.default.shouldUseTouchId = false
+        }
     }
     
 }

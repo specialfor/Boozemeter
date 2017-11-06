@@ -22,12 +22,32 @@ enum AuthType {
     }
 }
 
+typealias AuthCompletion = (Bool, String?) -> Void
+
 class LocalAuthService {
     
     let context: LAContext
     
     init() {
         self.context = LAContext()
+    }
+    
+    static func tryAuth() {
+        if StorageService.default.shouldUseTouchId {
+            SplashRouter.shared.showOverlay()
+            
+            let authService = LocalAuthService()
+            // TODO: reason description
+            authService.auth(with: .passcode, reason: "need to think about it") { success, message in
+                DispatchQueue.main.async {
+                    if success {
+                        SplashRouter.shared.dismiss(true)
+                    } else {
+                        SplashRouter.shared.showAccessDenied(with: message)
+                    }
+                }
+            }
+        }
     }
     
     func canAuth(with type: AuthType) -> Bool {
@@ -42,10 +62,15 @@ class LocalAuthService {
         return result
     }
     
-    func auth(with type: AuthType, reason: String) {
+    func auth(with type: AuthType, reason: String, completion: @escaping AuthCompletion) {
         context.evaluatePolicy(type.policy, localizedReason: reason) { (result, error) in
-            if let error = error as? LAError, error.code != .userFallback, error.code != .userCancel {
-                AlertManager.sharedInstance.showAlertOk(message: error.localizedDescription)
+            guard let error = error as? LAError else {
+                completion(true, nil)
+                return
+            }
+
+            if error.code != .userFallback {
+                completion(false, error.localizedDescription)
             }
         }
     }

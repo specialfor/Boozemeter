@@ -10,6 +10,8 @@ import UIKit
 
 class SplashRouter {
     
+    let overlayVC = AccessDeclinedViewController()
+    
     lazy var navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
@@ -58,6 +60,26 @@ class SplashRouter {
     
     func showSettings() {
         showModule(SettingsViewController(), popPrev: false)
+    }
+    
+    func showOverlay() {
+        overlayVC.hide()
+        present(overlayVC)
+    }
+    
+    func showAccessDenied(with title: String?) {
+        overlayVC.titleLabel.text = title
+        overlayVC.show()
+    }
+    
+    private func present(_ viewController: UIViewController, animated: Bool = true) {
+        if navigationController.presentedViewController != viewController {
+            navigationController.present(viewController, animated: animated, completion: nil)
+        }
+    }
+    
+    func dismiss(_ animated: Bool = true) {
+        navigationController.dismiss(animated: animated, completion: nil)
     }
     
     private func showModule(_ viewController: UIViewController, animated: Bool = true, popPrev: Bool = true) {

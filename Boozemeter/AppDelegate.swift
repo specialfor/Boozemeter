@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Twitter SDK
         Twitter.sharedInstance().start(withConsumerKey: Constants.Twitter.consumerKey, consumerSecret: Constants.Twitter.consumerSecret)
         
+        LocalAuthService.tryAuth()
+        
         return true
     }
     
@@ -50,6 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         StorageService.default.save()
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        LocalAuthService.tryAuth()
     }
     
 }
