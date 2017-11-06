@@ -121,14 +121,17 @@ class SettingsViewController: ViewController {
     // MARK: Actions
     @objc private func heightChanged(_ sliderView: SliderView) {
         StorageService.default.person?.height = Double(sliderView.currentValue)
+        AlcoholStateService.shared.recalculateState()
     }
     
     @objc private func weightChanged(_ sliderView: SliderView) {
         StorageService.default.person?.weight = Double(sliderView.currentValue)
+        AlcoholStateService.shared.recalculateState()
     }
     
     @objc private func sexChanged(_ segmentControl: SegmentControl) {
         StorageService.default.person?.sex = Sex(rawValue: segmentControl.currentIndex) ?? .male
+        AlcoholStateService.shared.recalculateState()
     }
     
     @objc private func touchIdChanged(_ segmentControl: SegmentControl) {

@@ -16,16 +16,10 @@ class AlcoholCalculator {
     private let respCoef = 0.15
     
     func calculateConcentration(for person: Person, withDrink drink: SelectedDrink) -> Double {
-        let sex = person.sex
         
-        let pHeight = person.height / 100.0
-        
-        let height = sqrt(person.weight / sex.bmi)
         let alcoMass = Double(drink.size) * drink.turnover * density
         
-        let dHeight = pHeight / height
-        
-        let conc = alcoMass / (person.weight * dHeight * sex.factor)
+        let conc = alcoMass / self.secondFactor(from: person)
         let concWithLosses = conc * (1 - (drink.satiety * sLength + sOffset))
         
         return concWithLosses
@@ -33,6 +27,16 @@ class AlcoholCalculator {
     
     func calculateAlcoholState(from state: AlcoholState) -> AlcoholState {
         let concentration = self.calculateConcentration(with: state.concentration, from: state.timestamp)
+        
+        let timestamp = Date().timeIntervalSince1970
+        
+        return AlcoholState(concentration: concentration, timestamp: timestamp, resorptionTimestamp: timeUntilSobering(concentration, timestamp: timestamp))
+    }
+    
+    func recalculateState(_ state: AlcoholState, fromPerson person: Person) -> AlcoholState {
+        let alcoMass = state.concentration * secondFactor(from: person)
+        
+        let concentration = alcoMass / secondFactor(from: StorageService.default.person!)
         
         let timestamp = Date().timeIntervalSince1970
         
@@ -50,6 +54,16 @@ class AlcoholCalculator {
     
     func timeUntilSobering(_ concentration: Double, timestamp: TimeInterval, timeValue: TimeValue = .seconds) -> TimeInterval {
         return timestamp + 60 * timeValue.factor * (concentration / respCoef)
+    }
+    
+    private func secondFactor(from person: Person) -> Double {
+        let sex = person.sex
+        let pHeight = person.height / 100.0
+        let height = sqrt(person.weight / sex.bmi)
+        
+        let dHeight = pHeight / height
+        
+        return person.weight * dHeight * sex.factor
     }
     
 }

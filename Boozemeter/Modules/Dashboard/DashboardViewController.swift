@@ -49,7 +49,6 @@ class DashboardViewController: ViewController {
         return view
     }()
     
-    
     lazy var resorptionDateView: DashboardInfoView = {
         let view = DashboardInfoView()
         

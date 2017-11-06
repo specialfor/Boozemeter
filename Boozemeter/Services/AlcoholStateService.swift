@@ -26,11 +26,14 @@ class AlcoholStateService {
     private var timer: Timer?
     private let timeInterval: TimeInterval = 60
     
+    private var person: Person!
+    
     // MARK: Singleton
     static let shared = AlcoholStateService()
     
     private init() {
         alcoholCalculator = AlcoholCalculator()
+        person = StorageService.default.person
         alcoholState = StorageService.default.alcoholState
         
         alcoholState = alcoholCalculator.calculateAlcoholState(from: alcoholState)
@@ -45,7 +48,7 @@ class AlcoholStateService {
     
     // MARK: Alco status
     func updateStateWith(drink: SelectedDrink) {
-        let concentration = alcoholCalculator.calculateConcentration(for: StorageService.default.person!, withDrink: drink)
+        let concentration = alcoholCalculator.calculateConcentration(for: person, withDrink: drink)
         
         alcoholState.concentration += concentration
         alcoholState.timestamp = Date().timeIntervalSince1970
@@ -61,7 +64,11 @@ class AlcoholStateService {
     }
     
     func recalculateState() {
-        // TODO: recalculate state
+        alcoholState = alcoholCalculator.recalculateState(alcoholState, fromPerson: person)
+        
+        person = StorageService.default.person
+        
+        delegate?.didAlcoholStateUpdated(self, state: alcoholState)
     }
     
     // MARK: Timer
