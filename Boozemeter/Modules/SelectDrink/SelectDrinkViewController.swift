@@ -39,7 +39,7 @@ class SelectDrinkViewController: ViewController {
     }()
     
     lazy var turnoverSlider: SliderView = {
-        let slider = SliderView(title: "Градус:", min: 1, max: 96, current: 12)
+        let slider = SliderView(title: Constants.LocalizableKeys.degree.localized, min: 1, max: 96, current: 12)
         
         slider.formatString = "%@ %%"
         
@@ -56,9 +56,9 @@ class SelectDrinkViewController: ViewController {
     }()
     
     lazy var sizeSlider: SliderView = {
-        let slider = SliderView(title: "Объем:", min: 1, max: 1000, current: 50)
+        let slider = SliderView(title: Constants.LocalizableKeys.volume.localized, min: 1, max: 1000, current: 50)
         
-        slider.formatString = "%@ мл."
+        slider.formatString = Constants.LocalizableKeys.ml.localized
         
         let inset = 16.0
         
@@ -73,7 +73,7 @@ class SelectDrinkViewController: ViewController {
     }()
     
     lazy var satietySlider: SliderView = {
-        let slider = SliderView(title: "Сытость:", min: 0, max: 100, current: 30)
+        let slider = SliderView(title: Constants.LocalizableKeys.satiety.localized, min: 0, max: 100, current: 30)
         
         slider.formatString = "%@ %%"
         
@@ -90,9 +90,9 @@ class SelectDrinkViewController: ViewController {
     }()
     
     lazy var timeSlider: SliderView = {
-        let slider = SliderView(title: "Время:", min: 0, max: 300, current: 30)
+        let slider = SliderView(title: Constants.LocalizableKeys.time.localized, min: 0, max: 300, current: 30)
         
-        slider.formatString = "%@ минут назад"
+        slider.formatString = Constants.LocalizableKeys.minutesAgo.localized
         
         let inset = 16.0
         
@@ -126,7 +126,7 @@ class SelectDrinkViewController: ViewController {
         
         timeSlider.isHidden = true
         
-        calculateButton.setTitle("Посчитать", for: .normal)
+        calculateButton.setTitle(Constants.LocalizableKeys.countUp.localized, for: .normal)
         calculateButton.addTarget(self, action: #selector(calculateTapped), for: .touchUpInside)
     }
     

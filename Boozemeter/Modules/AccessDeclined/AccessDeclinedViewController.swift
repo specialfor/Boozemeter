@@ -48,7 +48,7 @@ class AccessDeclinedViewController: ViewController {
         
         titleLabel.isHidden = false
         
-        tryButton.setTitle("Разблокировать", for: .normal)
+        tryButton.setTitle(Constants.LocalizableKeys.unblock.localized, for: .normal)
         tryButton.addTarget(self, action: #selector(tryTapped), for: .touchUpInside)
     }
     

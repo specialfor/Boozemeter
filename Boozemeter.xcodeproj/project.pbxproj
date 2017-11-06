@@ -41,6 +41,8 @@
 		E7A8F76C1FAE7363005ACDE9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76B1FAE7363005ACDE9 /* UIViewControllerExtension.swift */; };
 		E7A8F76E1FAE7387005ACDE9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76D1FAE7387005ACDE9 /* UIViewExtension.swift */; };
 		E7A8F7701FAE74A3005ACDE9 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */; };
+		E7AFE1091FB0E896008A46C3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7AFE10B1FB0E896008A46C3 /* Localizable.strings */; };
+		E7AFE1111FB0EE0F008A46C3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AFE1101FB0EE0F008A46C3 /* StringExtension.swift */; };
 		E7BAA3751FB04FA900E6975C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BAA3741FB04FA900E6975C /* SettingsViewController.swift */; };
 		E7C5C0B51FAF8184003191F1 /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B41FAF8184003191F1 /* SharingService.swift */; };
 		E7C5C0B71FAF819B003191F1 /* Sharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5C0B61FAF819B003191F1 /* Sharer.swift */; };
@@ -92,6 +94,12 @@
 		E7A8F76B1FAE7363005ACDE9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		E7A8F76D1FAE7387005ACDE9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		E7A8F76F1FAE74A3005ACDE9 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		E7AFE10A1FB0E896008A46C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E7AFE10C1FB0E936008A46C3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E7AFE10D1FB0E936008A46C3 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E7AFE10E1FB0E93B008A46C3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E7AFE10F1FB0E93B008A46C3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E7AFE1101FB0EE0F008A46C3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E7BAA3741FB04FA900E6975C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E7C5C0B41FAF8184003191F1 /* SharingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingService.swift; sourceTree = "<group>"; };
 		E7C5C0B61FAF819B003191F1 /* Sharer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sharer.swift; sourceTree = "<group>"; };
@@ -220,6 +228,7 @@
 				E78FE8801FADF345006C200F /* Services */,
 				E779D7CE1FADCE6600C786EE /* Library */,
 				E779D7BC1FADBBCA00C786EE /* AppDelegate.swift */,
+				E7AFE10B1FB0E896008A46C3 /* Localizable.strings */,
 				E779D7C31FADBBCA00C786EE /* Assets.xcassets */,
 				E779D7C51FADBBCA00C786EE /* LaunchScreen.storyboard */,
 				E779D7C81FADBBCA00C786EE /* Info.plist */,
@@ -288,6 +297,7 @@
 				E7A8F7631FAE6DE7005ACDE9 /* UILabelExtension.swift */,
 				E7A8F76B1FAE7363005ACDE9 /* UIViewControllerExtension.swift */,
 				E7A8F76D1FAE7387005ACDE9 /* UIViewExtension.swift */,
+				E7AFE1101FB0EE0F008A46C3 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -382,6 +392,8 @@
 			knownRegions = (
 				Base,
 				en,
+				uk,
+				ru,
 			);
 			mainGroup = E779D7B01FADBBCA00C786EE;
 			productRefGroup = E779D7BA1FADBBCA00C786EE /* Products */;
@@ -399,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E779D7C71FADBBCA00C786EE /* LaunchScreen.storyboard in Resources */,
+				E7AFE1091FB0E896008A46C3 /* Localizable.strings in Resources */,
 				E779D7C41FADBBCA00C786EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +497,7 @@
 				E7A539F71FAE36F3005BB952 /* StorageService.swift in Sources */,
 				E7A8F76C1FAE7363005ACDE9 /* UIViewControllerExtension.swift in Sources */,
 				E7BAA3751FB04FA900E6975C /* SettingsViewController.swift in Sources */,
+				E7AFE1111FB0EE0F008A46C3 /* StringExtension.swift in Sources */,
 				E7A8F7681FAE6FC8005ACDE9 /* View.swift in Sources */,
 				E72F8FD81FAF2F3100D90E90 /* AlcoholCalculator.swift in Sources */,
 				E78FE8821FADF363006C200F /* LocalAuthService.swift in Sources */,
@@ -528,8 +542,20 @@
 			children = (
 				E779D7C61FADBBCA00C786EE /* Base */,
 				E72F8FDE1FAF3DEC00D90E90 /* en */,
+				E7AFE10C1FB0E936008A46C3 /* uk */,
+				E7AFE10E1FB0E93B008A46C3 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E7AFE10B1FB0E896008A46C3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7AFE10A1FB0E896008A46C3 /* en */,
+				E7AFE10D1FB0E936008A46C3 /* uk */,
+				E7AFE10F1FB0E93B008A46C3 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

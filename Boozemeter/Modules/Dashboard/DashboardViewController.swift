@@ -66,7 +66,7 @@ class DashboardViewController: ViewController {
     lazy var resetButton: UIButton = {
         let button = UIButton()
         
-        button.setTitle("Сбросить", for: .normal)
+        button.setTitle(Constants.LocalizableKeys.reset.localized, for: .normal)
         button.setTitleColor(theme.accentColor, for: .normal)
         
         self.view.addSubview(button)
@@ -104,8 +104,8 @@ class DashboardViewController: ViewController {
         
         configureNavBar()
 
-        resorptionTimeView.titleLabel.text = "Время вывода алкоголя:"
-        resorptionDateView.titleLabel.text = "Дата отрезвления:"
+        resorptionTimeView.titleLabel.text = Constants.LocalizableKeys.alcoholWithdrawal.localized
+        resorptionDateView.titleLabel.text = Constants.LocalizableKeys.soberingDate.localized
         
         addButton.setTitle("+", for: .normal)
         addButton.addTarget(self, action: #selector(addTapped(_:)), for: .touchUpInside)
@@ -121,7 +121,7 @@ class DashboardViewController: ViewController {
     // MARK: Configuration
     private func configureNavBar() {
         navigationItem.hidesBackButton = true
-        navigationItem.title = "Состояние"
+        navigationItem.title = Constants.LocalizableKeys.state.localized
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(settingsTapped(_:)))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
     }
@@ -142,13 +142,13 @@ class DashboardViewController: ViewController {
             SharingService().share(with: facebookSharer)
         }
         
-        let cancel = UIAlertAction(title: "Отменить", style: .cancel)
+        let cancel = UIAlertAction(title: Constants.LocalizableKeys.cancel.localized, style: .cancel)
         
-        AlertManager.sharedInstance.showActionSheet(title: "Поделиться", message: nil, actions: [twitterAction, facebookAction, cancel])
+        AlertManager.sharedInstance.showActionSheet(title: Constants.LocalizableKeys.share.localized, message: nil, actions: [twitterAction, facebookAction, cancel])
     }
     
     @objc private func resetTapped() {
-        AlertManager.sharedInstance.showAlertOkCancel(message: "Вы действительно хотите сбросить статус?", completionOk: {
+        AlertManager.sharedInstance.showAlertOkCancel(message: Constants.LocalizableKeys.areYouSure.localized, completionOk: {
             self.alcoholService.resetState()
         }, completionCancel: nil)
     }
@@ -169,7 +169,7 @@ class DashboardViewController: ViewController {
         if  delta > 0 {
             let minutes = Int(round(delta / 60))
             
-            resorptionTimeView.valueLabel.text = "через \(minutes) минут"
+            resorptionTimeView.valueLabel.text = Constants.LocalizableKeys.inA.localized + " \(minutes) " + Constants.LocalizableKeys.minutes.localized
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "EEEE, MMM d, h:mm a"

@@ -31,9 +31,9 @@ class InitialViewController: ViewController {
     }()
     
     lazy var heightSlider: SliderView = {
-        let slider = SliderView(title: "Рост:", min: 120, max: 210, current: 177)
+        let slider = SliderView(title: Constants.LocalizableKeys.height.localized, min: 120, max: 210, current: 177)
         
-        slider.formatString = "%@ см."
+        slider.formatString = Constants.LocalizableKeys.cm.localized
         
         self.view.addSubview(slider)
         slider.snp.makeConstraints({ (make) in
@@ -45,9 +45,9 @@ class InitialViewController: ViewController {
     }()
     
     lazy var weightSlider: SliderView = {
-        let slider = SliderView(title: "Вес:", min: 40, max: 200, current: 70)
+        let slider = SliderView(title: Constants.LocalizableKeys.weight.localized, min: 40, max: 200, current: 70)
         
-        slider.formatString = "%@ кг."
+        slider.formatString = Constants.LocalizableKeys.kg.localized
         
         self.view.addSubview(slider)
         slider.snp.makeConstraints({ (make) in
@@ -95,12 +95,12 @@ class InitialViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = "Введите персональные данные"
+        titleLabel.text = Constants.LocalizableKeys.enterData.localized
         
-        sexSegment.titleLabel.text = "Пол:"
+        sexSegment.titleLabel.text = Constants.LocalizableKeys.sex.localized
         sexSegment.itemTitles = [Sex.male.title, Sex.female.title]
         
-        nextButton.setTitle("Вперед", for: .normal)
+        nextButton.setTitle(Constants.LocalizableKeys.next.localized, for: .normal)
         nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .touchUpInside)
     }
     

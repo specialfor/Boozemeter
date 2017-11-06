@@ -19,7 +19,7 @@ class AlertManager {
     func showAlertOk(title: String, message: String, completion:(()->Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let defaultAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+        let defaultAction = UIAlertAction(title: Constants.LocalizableKeys.ok.localized, style: .default) { (action) in
             completion?()
         }
         alert.addAction(defaultAction)
@@ -35,12 +35,12 @@ class AlertManager {
     func showAlertOkCancel(message: String, completionOk:(()->Void)? = nil, completionCancel:(()->Void)? = nil) {
         let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
         
-        let defaultAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+        let defaultAction = UIAlertAction(title: Constants.LocalizableKeys.ok.localized, style: .default) { (action) in
             completionOk?()
         }
         alert.addAction(defaultAction)
         
-        let secondAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        let secondAction = UIAlertAction(title: Constants.LocalizableKeys.cancel.localized, style: .cancel) { (action) in
             completionCancel?()
         }
         alert.addAction(secondAction)

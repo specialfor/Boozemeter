@@ -1,0 +1,55 @@
+/* 
+  Localizable.strings
+  Boozemeter
+
+  Created by Volodymyr Hryhoriev on 11/6/17.
+  Copyright © 2017 NoblesTeam. All rights reserved.
+*/
+
+"Settings" = "Налаштування";
+"reason" = "Будь ласка, розблокуйте додаток, щоб побачити контент";
+"density" = "Густина:";
+"male" = "Чол.";
+"female" = "Жін.";
+"Alcohol withdrawal time" = "Час виведення алкоголя:";
+"Alcohol" = "Алкоголь";
+"cm" = "%@ см.";
+"kg" = "%@ кг.";
+"Enter your personal data" = "Введіть персональні данні";
+"Sex" = "Стать:";
+"Height" = "Зріст:";
+"Weight" = "Вага:";
+"Degree" = "Градус:";
+"Volume" = "Об'єм:";
+"Time:" = "Час:";
+"minutes ago" = "%@ хвилин назад";
+"Count Up" = "Порахувати";
+"ml" = "%@ мл.";
+
+"Unblock" = "Розблокувати";
+"Yes" = "Так";
+"No" = "Ні";
+"Use Touch Id" = "Використовувати Touch Id:";
+"Satiety" = "Ситість:";
+"Sobering Date" = "Дата протверезіння:";
+"Reset" = "Скинути";
+"State" = "Стан";
+"Cancel" = "Відмінити";
+"Share" = "Поділитися";
+"Are you sure" = "Ви впевнені, що хочете скинути стан?";
+"in" = "через";
+"minutes" = "хвилин";
+"Concentration" = "Концентрація:";
+"Next" = "Далі";
+"Ok" = "Ок";
+"Vodka" = "Горілка";
+"Beer" = "Пиво";
+"Champagne" = "Шампанське";
+"Cognac" = "Коньяк";
+"Gin" = "Джин";
+"Liquor" = "Лікер";
+"Rum" = "Ром";
+"Tequila" = "Текіла";
+"Vermouth" = "Вермут";
+"Whiskey" = "Віскі";
+"Wine" = "Вино";

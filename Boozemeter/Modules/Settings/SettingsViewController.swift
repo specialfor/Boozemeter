@@ -12,9 +12,9 @@ class SettingsViewController: ViewController {
     
     // MARK: Views
     lazy var heightSlider: SliderView = {
-        let slider = SliderView(title: "Рост:", min: 120, max: 210, current: 177)
+        let slider = SliderView(title: Constants.LocalizableKeys.height.localized, min: 120, max: 210, current: 177)
         
-        slider.formatString = "%@ см."
+        slider.formatString = Constants.LocalizableKeys.cm.localized
         
         let inset = 16.0
         
@@ -29,9 +29,9 @@ class SettingsViewController: ViewController {
     }()
     
     lazy var weightSlider: SliderView = {
-        let slider = SliderView(title: "Вес:", min: 40, max: 200, current: 70)
+        let slider = SliderView(title: Constants.LocalizableKeys.weight.localized, min: 40, max: 200, current: 70)
         
-        slider.formatString = "%@ кг."
+        slider.formatString = Constants.LocalizableKeys.kg.localized
         
         self.view.addSubview(slider)
         slider.snp.makeConstraints({ (make) in
@@ -75,7 +75,7 @@ class SettingsViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Настройки"
+        navigationItem.title = Constants.LocalizableKeys.settings.localized
         
         configureHeightSlider()
         configureWeightSlider()
@@ -97,7 +97,7 @@ class SettingsViewController: ViewController {
     }
 
     private func configureSexSegment() {
-        sexSegment.titleLabel.text = "Пол:"
+        sexSegment.titleLabel.text = Constants.LocalizableKeys.sex.localized
         sexSegment.itemTitles = [Sex.male.title, Sex.female.title]
         sexSegment.addTarget(self, action: #selector(sexChanged), for: .valueChanged)
         
@@ -108,8 +108,8 @@ class SettingsViewController: ViewController {
     }
     
     private func configureTouchIdSegment() {
-        touchIdSegment.titleLabel.text = "Использовать Touch Id:"
-        touchIdSegment.itemTitles = ["Нет", "Да"]
+        touchIdSegment.titleLabel.text = Constants.LocalizableKeys.useTouchId.localized
+        touchIdSegment.itemTitles = [Constants.LocalizableKeys.no.localized, Constants.LocalizableKeys.yes.localized]
         touchIdSegment.addTarget(self, action: #selector(touchIdChanged), for: .valueChanged)
         
         touchIdSegment.segmentControl.isHidden = false

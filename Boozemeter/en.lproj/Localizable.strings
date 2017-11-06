@@ -1,0 +1,56 @@
+/* 
+  Localizable.strings
+  Boozemeter
+
+  Created by Volodymyr Hryhoriev on 11/6/17.
+  Copyright © 2017 NoblesTeam. All rights reserved.
+*/
+
+"Settings" = "Settings";
+"reason" = "Please unblock app in order to see content";
+"density" = "Density:";
+"male" = "Male";
+"female" = "Female";
+"Alcohol withdrawal time" = "Alcohol withdrawal time:";
+"Alcohol" = "Alcohol";
+"cm" = "%@ cm.";
+"kg" = "%@ kg.";
+"Enter your personal data" = "Enter your personal data";
+"Sex" = "Sex:";
+"Height" = "Height:";
+"Weight" = "Weight:";
+"Degree" = "Degree:";
+"Volume" = "Volume:";
+"Time:" = "Time:";
+"minutes ago" = "%@ minutes ago";
+"Count Up" = "Count up";
+"ml" = "%@ ml.";
+
+"Unblock" = "Unblock";
+"Yes" = "Yes";
+"No" = "No";
+"Use Touch Id" = "Use Touch Id:";
+"Satiety" = "Satiety:";
+"Sobering Date" = "Sobering Date:";
+"Reset" = "Reset";
+"State" = "State";
+"Cancel" = "Cancel";
+"Share" = "Share";
+"Are you sure" = "Are you sure you want to reset state?";
+"in" = "in";
+"minutes" = "minutes";
+"Concentration" = "Concentration:";
+"Next" = "Next";
+"Ok" = "Ok";
+"Vodka" = "Vodka";
+"Beer" = "Beer";
+"Champagne" = "Champagne";
+"Cognac" = "Cognac";
+"Gin" = "Gin";
+"Liquor" = "Liquor";
+"Rum" = "Rum";
+"Tequila" = "Tequila";
+"Vermouth" = "Vermouth";
+"Whiskey" = "Whiskey";
+"Wine" = "Wine";
+

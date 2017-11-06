@@ -10,7 +10,7 @@ enum Sex: Int, Codable {
     case male
     case female
     
-    private static let titles = ["Муж.", "Жен."]
+    private static let titles = [Constants.LocalizableKeys.male.localized, Constants.LocalizableKeys.female.localized]
     private static let factors = [0.7, 0.6]
     private static let bmis = [23.5, 22.0]
     

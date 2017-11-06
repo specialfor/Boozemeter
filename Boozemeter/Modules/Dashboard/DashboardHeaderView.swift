@@ -23,7 +23,7 @@ class DashboardHeaderView: View {
     lazy var concTitleLabel: UILabel = {
         let label = UILabel(textColor: theme.selectedTextColor, fontSize: 18.0)
         
-        label.text = "Концентрация:"
+        label.text = Constants.LocalizableKeys.concentration.localized
         
         let inset = 16.0
         

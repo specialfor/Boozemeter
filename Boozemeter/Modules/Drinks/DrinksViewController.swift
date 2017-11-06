@@ -39,7 +39,7 @@ class DrinksViewController: ViewController {
         
         collectionView.reloadData()
         
-        navigationItem.title = "Алкоголь"
+        navigationItem.title = Constants.LocalizableKeys.alcohol.localized
     }
     
 }

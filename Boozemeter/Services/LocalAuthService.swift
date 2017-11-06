@@ -37,8 +37,7 @@ class LocalAuthService {
             SplashRouter.shared.showOverlay()
             
             let authService = LocalAuthService()
-            // TODO: reason description
-            authService.auth(with: .passcode, reason: "need to think about it") { success, message in
+            authService.auth(with: .passcode, reason: Constants.LocalizableKeys.reason.localized) { success, message in
                 DispatchQueue.main.async {
                     if success {
                         SplashRouter.shared.dismiss(true)
