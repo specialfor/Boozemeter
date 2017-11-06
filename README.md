@@ -1,4 +1,10 @@
 # Boozemeter
+![](https://img.shields.io/badge/swift-4.0-green.svg)
+![](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
+![](https://img.shields.io/badge/iOS%20version-10%2B-orange.svg)
+![](https://img.shields.io/badge/Xcode%20version-9%2B-orange.svg)
+
+# About
 Тестове завдання в категорії Mobile App хакатону IT-REVOLUTION`17
 
 Для розрахунку стану користувача використовувалсь формула Відмарка (ознайомитись с формулами можете в файлі [**formula.txt**](http://github.com)).
