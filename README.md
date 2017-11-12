@@ -5,7 +5,7 @@
 ![](https://img.shields.io/badge/Xcode%20version-9%2B-orange.svg)
 
 # Опис
-Тестове завдання в категорії Mobile App хакатону IT-REVOLUTION`17
+Тестове завдання команди NoblesTeam в категорії Mobile App хакатону IT-REVOLUTION`17
 
 Для розрахунку стану користувача використовувалсь формула Відмарка (ознайомитись с формулами можете в файлі [**formula.txt**](https://github.com/specialfor/Boozemeter/blob/master/formula.txt)).
 Користувач може знаходитися в 5 стадіях алкогольного сп'яніння:
